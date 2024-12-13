@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html'],
+  content: [
+    './index.html',
+    './login.html',
+    './sign-up.html',
+  ],
   theme: {
     extend: {
       spacing: {
@@ -9,6 +13,9 @@ module.exports = {
       colors: {
         'blue-primary': '#001F54',
         'blue-secondary': '#007AFF',
+      },
+      backgroundImage: {
+        'custom-image': "url('/images/hero-bg.png')",
       },
     },
   },
