@@ -4,6 +4,9 @@ module.exports = {
     './index.html',
     './login.html',
     './sign-up.html',
+    './verification.html',
+    './verified.html',
+    './recover-password.html',
   ],
   theme: {
     extend: {
