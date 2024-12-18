@@ -1099,6 +1099,11 @@ html,
           background-clip: text;
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1172,6 +1177,14 @@ html,
 
 .pt-120{
   padding-top: 120px;
+}
+
+.pb-0{
+  padding-bottom: 0px;
+}
+
+.pt-16{
+  padding-top: 4rem;
 }
 
 .text-left{
