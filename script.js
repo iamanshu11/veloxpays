@@ -1,45 +1,82 @@
 const burgerMenu = document.getElementById('burger-menu');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const burgerIcon = document.getElementById('burger-icon');
-  const closeIcon = document.getElementById('close-icon');
+const mobileMenu = document.getElementById('mobile-menu');
+const burgerIcon = document.getElementById('burger-icon');
+const closeIcon = document.getElementById('close-icon');
 
-  burgerMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    burgerIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
+burgerMenu.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  burgerIcon.classList.toggle('hidden');
+  closeIcon.classList.toggle('hidden');
+});
+function toggleDropdown(id) {
+  const dropdown = document.getElementById(id);
+  const dropdownIcon = dropdown.previousElementSibling.querySelector('svg');
+
+  // Toggle dropdown visibility
+  dropdown.classList.toggle('hidden');
+
+  // Adjust the icon's rotation
+  if (!dropdown.classList.contains('hidden')) {
+      dropdownIcon.classList.add('rotate-180');
+  } else {
+      dropdownIcon.classList.remove('rotate-180');
+  }
+}
+
+function selectCurrency(flagUrl, currencyCode) {
+  const flagElement = document.getElementById('selected-flag');
+  const currencyElement = document.getElementById('selected-currency');
+  const dropdown = document.getElementById('currency-dropdown');
+  const dropdownIcon = dropdown.previousElementSibling.querySelector('svg');
+
+  // Update selected flag and currency
+  flagElement.src = flagUrl;
+  currencyElement.textContent = currencyCode;
+
+  // Close dropdown
+  dropdown.classList.add('hidden');
+
+  // Reset the icon's rotation
+  dropdownIcon.classList.remove('rotate-180');
+}
+
+function selectRecipientCurrency(flagUrl, currencyCode) {
+  const flagElement = document.getElementById('recipient-flag');
+  const currencyElement = document.getElementById('recipient-currency');
+  const dropdown = document.getElementById('recipient-currency-dropdown');
+  const dropdownIcon = dropdown.previousElementSibling.querySelector('svg');
+
+  // Update selected flag and currency
+  flagElement.src = flagUrl;
+  currencyElement.textContent = currencyCode;
+
+  // Close dropdown
+  dropdown.classList.add('hidden');
+
+  // Reset the icon's rotation
+  dropdownIcon.classList.remove('rotate-180');
+}
+
+function filterDropdown(listId, searchId) {
+  const dropdown = document.getElementById(listId);
+  const dropdownIcon = dropdown.previousElementSibling.querySelector('svg');
+  const searchInput = document.getElementById(searchId).value.toLowerCase();
+  const items = dropdown.querySelectorAll('li');
+
+  // Filter dropdown items
+  items.forEach(item => {
+      const text = item.innerText.toLowerCase();
+      item.style.display = text.includes(searchInput) ? '' : 'none';
   });
 
-    function selectCurrency(flagUrl, currencyCode) {
-        const flagElement = document.getElementById('selected-flag');
-        const currencyElement = document.getElementById('selected-currency');
-        flagElement.src = flagUrl;
-        currencyElement.textContent = currencyCode;
-        toggleDropdown('currency-dropdown');
-    }
+  // Keep dropdown icon rotated while searching
+  if (!dropdown.classList.contains('hidden')) {
+      dropdownIcon.classList.add('rotate-180');
+  } else {
+      dropdownIcon.classList.remove('rotate-180');
+  }
+}
 
-    function selectRecipientCurrency(flagUrl, currencyCode) {
-        const flagElement = document.getElementById('recipient-flag');
-        const currencyElement = document.getElementById('recipient-currency');
-        flagElement.src = flagUrl;
-        currencyElement.textContent = currencyCode;
-        toggleDropdown('recipient-currency-dropdown');
-    }
-
-    function toggleDropdown(id) {
-        const dropdown = document.getElementById(id);
-        dropdown.classList.toggle('hidden');
-    }
-
-    function filterDropdown(listId, searchId) {
-        const list = document.getElementById(listId);
-        const searchInput = document.getElementById(searchId).value.toLowerCase();
-        const items = list.querySelectorAll('li');
-
-        items.forEach(item => {
-            const text = item.innerText.toLowerCase();
-            item.style.display = text.includes(searchInput) ? '' : 'none';
-        });
-    }
 
     let activeCategory = 'money'; // Default active category
 
