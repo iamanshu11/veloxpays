@@ -12,6 +12,7 @@
 
 <body>
   <main>
+
     <div class="flex items-center justify-center min-h-screen bg-gray-50">
       <div class="relative flex flex-col md:flex-row w-full h-screen bg-white">
         <!-- Left Section with Full Size Image -->
@@ -26,7 +27,7 @@
           <!-- Logo at Top Left (Desktop) -->
           <div class="absolute top-4 left-4 hidden md:block">
             <a href="index.html"><img src="images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
-    
+            
           </div>
           <!-- Cross Mark at Form Right Corner (Desktop) -->
           <div class="hidden md:block  absolute top-4 right-4">
@@ -38,43 +39,49 @@
         <div class="flex-1 flex items-center justify-center p-4 md:p-8">
           <div class="w-full max-w-xl">
             <!-- Form Header -->
-            <h2 class="text-2xl font-bold text-blue-500 mb-2 text-center">Enter<span class="text-black"> Code </span></h2>
-            <p class="text-sm text-gray-500 mb-6 text-center">Please enter the verification code sent to your email</p>
-    
+            <h2 class="text-2xl font-bold text-blue-500 mb-2 text-center">Reset <span class="text-black">Password</span></h2>
+            <p class="text-sm text-gray-500 mb-6 text-center">Reset your password</p>
+            
             <!-- Form -->
             <form action="#" method="POST" class="space-y-8">
-              <!-- Code Input Boxes -->
-              <!-- Code Input Boxes -->
-              <div id="otp-input" class="flex justify-center gap-4 mb-8">
-                <input type="text" maxlength="1"
-                  class="otp-box w-12 h-12 border border-gray-300 rounded-md text-center text-xl focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                <input type="text" maxlength="1"
-                  class="otp-box w-12 h-12 border border-gray-300 rounded-md text-center text-xl focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                <input type="text" maxlength="1"
-                  class="otp-box w-12 h-12 border border-gray-300 rounded-md text-center text-xl focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                <input type="text" maxlength="1"
-                  class="otp-box w-12 h-12 border border-gray-300 rounded-md text-center text-xl focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                <input type="text" maxlength="1"
-                  class="otp-box w-12 h-12 border border-gray-300 rounded-md text-center text-xl focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                <input type="text" maxlength="1"
-                  class="otp-box w-12 h-12 border border-gray-300 rounded-md text-center text-xl focus:outline-none focus:ring-2 focus:ring-blue-600" />
+             <!-- Password Field -->
+             <div class="mb-5">
+              <label for="password" class="block text-gray-600 mb-1"></label>
+              <div class="relative">
+                <input type="password" id="password" name="password" placeholder="New Password"
+                       class="w-full px-4 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="button" onclick="togglePassword('password', 'eye-password', 'eye-icon-password')" class="absolute inset-y-0 right-0 flex items-center px-3">
+                  <img id="eye-icon-password" src="images/signup/hide.png" alt="Toggle Password" class="h-5 w-5">
+                </button>
               </div>
+            </div>
+  
+            <!-- Confirm Password -->
+            <div>
+              <label for="confirm_password" class="block text-gray-600 mb-5"></label>
+              <div class="relative mt-5">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder=" Confirm New Password"
+                       class="w-full px-4 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="button" onclick="togglePassword('confirm_password', 'eye-confirm', 'eye-icon-confirm')" class="absolute inset-y-0 right-0 flex items-center px-3">
+                  <img id="eye-icon-confirm" src="images/signup/hide.png" alt="Toggle Confirm Password" class="h-5 w-5">
+                </button>
+              </div>
+            </div>
     
               <!-- Submit Button -->
-              <a href="recover-save-pasword.html"
+              <a href="password-changed.html"
                 class="block w-full bg-blue-primary text-white text-center py-3 rounded-md font-medium hover:bg-blue-900 transition">
-                Reset Password
-              </a>
-              <a href="login.html" class="block text-center mt-4 text-blue-600 cursor-pointer hover:underline">
-                Edit email
+                Reset
               </a>
             </form>
           </div>
         </div>
       </div>
     </div>
-
+    
   </main>
+
+
 
   <script src="script.js"></script>
 </body>

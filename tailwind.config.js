@@ -7,6 +7,7 @@ module.exports = {
     './verification.html',
     './verified.html',
     './recover-password.html',
+    './recover-save-pasword.html',
   ],
   theme: {
     extend: {
