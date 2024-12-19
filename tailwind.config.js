@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './index.html',
-    './login.html',
-    './sign-up.html',
-    './verification.html',
-    './verified.html',
-    './recover-password.html',
-    './recover-save-pasword.html',
+    './src/index.html',
+    './src/login.html',
+    './src/sign-up.html',
+    './src/verification.html',
+    './src/verified.html',
+    './src/recover-password.html',
+    './src/recover-save-pasword.html',
   ],
   theme: {
     extend: {
