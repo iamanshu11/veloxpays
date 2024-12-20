@@ -130,9 +130,9 @@ function filterDropdown(listId, searchId) {
 
       if (input.type === 'password') {
         input.type = 'text';
-        eyeIcon.src = 'images/signup/visible.png';
+        eyeIcon.src = '../images/signup/visible.png';
       } else {
         input.type = 'password';
-        eyeIcon.src = 'images/signup/hide.png';
+        eyeIcon.src = '../images/signup/hide.png';
       }
     }
