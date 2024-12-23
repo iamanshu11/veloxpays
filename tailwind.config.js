@@ -8,6 +8,8 @@ module.exports = {
     './src/verified.html',
     './src/recover-password.html',
     './src/recover-save-pasword.html',
+    './src/select-residency.html',
+    './src/personal-details.html',
   ],
   theme: {
     extend: {

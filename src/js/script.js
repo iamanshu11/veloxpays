@@ -1,3 +1,37 @@
+const searchInput = document.querySelector(".residency-search-input");
+const searchFlag = document.querySelector(".residency-search-flag");
+const countryOptions = document.querySelectorAll(".residency-country-option");
+const countryList = document.querySelector(".residency-country-list");
+
+// Filter countries based on input
+searchInput.addEventListener("input", (e) => {
+    const filter = e.target.value.toLowerCase();
+    countryOptions.forEach(option => {
+        const countryName = option.dataset.name.toLowerCase();
+        if (countryName.includes(filter)) {
+            option.style.display = "flex";
+        } else {
+            option.style.display = "none";
+        }
+    });
+});
+
+// Select a country
+countryOptions.forEach(option => {
+    option.addEventListener("click", () => {
+        const flag = option.dataset.flag;
+        const name = option.dataset.name;
+
+        // Update input with selected country
+        searchFlag.src = flag;
+        searchFlag.classList.remove("hidden");
+        searchInput.value = name;
+    });
+});
+
+
+
+
 const burgerMenu = document.getElementById('burger-menu');
 const mobileMenu = document.getElementById('mobile-menu');
 const burgerIcon = document.getElementById('burger-icon');
@@ -136,3 +170,5 @@ function filterDropdown(listId, searchId) {
         eyeIcon.src = '../images/signup/hide.png';
       }
     }
+
+

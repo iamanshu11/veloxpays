@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloxpays</title>
+
+  <link href="../dist/output.css" rel="stylesheet">
+  <link href="../src/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+
+    <div class="flex items-center justify-center min-h-screen bg-gray-50">
+      <div class="relative flex flex-col md:flex-row w-full h-screen bg-white">
+        <!-- Left Section with Full Size Image -->
+        <div class=" w-full md:w-1/2 h-auto md:h-full">
+          <!-- Top Image in Mobile View -->
+          <img src="../images/residency.png" alt="Full Size Image"
+            class="w-full h-90 md:h-full object-cover hidden md:block">
+          <!-- Logo and Cross in Mobile View -->
+          <div class="absolute top-4 left-4 md:hidden flex items-center justify-between w-full px-4">
+            <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
+            <a href="index.html" class="text-gray-600 text-2xl hover:text-gray-800 pr-5">&times;</a>
+          </div>
+          <!-- Logo at Top Left (Desktop) -->
+          <div class="absolute top-4 left-4 hidden md:block">
+            <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
+
+          </div>
+          <!-- Cross Mark at Form Right Corner (Desktop) -->
+          <div class="hidden md:block  absolute top-4 right-4">
+            <a href="index.html" class="text-gray-600 text-2xl hover:text-gray-800 ">&times;</a>
+          </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="flex-1 flex items-center justify-center p-4 md:p-8">
+          <div class="w-full max-w-xl">
+            <!-- Form Header -->
+            <h2 class="text-2xl font-bold text-blue-500 mb-2 text-center">Select <span class="text-black">Residency
+              </span></h2>
+            <p class="text-sm text-gray-500 mb-6 text-center">Select your residential country </p>
+
+            <!-- Form -->
+            <form action="#" method="POST" class="space-y-8">
+
+              <!-- Search Input Field -->
+              <div class="w-full mt-4">
+                <div class="flex items-center border border-gray-300 rounded-lg p-3 bg-white">
+                  <img class="residency-search-flag hidden w-10 h-6 mr-4" src="" alt="Selected Flag">
+                  <input type="text" class="residency-search-input w-full bg-transparent focus:outline-none"
+                    placeholder="Select Your Country">
+                </div>
+              </div>
+
+              <!-- Country Dropdown -->
+              <div
+                class="residency-country-list w-full mt-4 bg-white border border-gray-300 rounded-lg max-h-48 overflow-y-auto">
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="Bangladesh" data-flag="../images/money-flag/bangladesh.webp">
+                  <img src="../images/money-flag/bangladesh.webp" alt="Bangladesh" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">Bangladesh</span>
+                </div>
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="India" data-flag="../images/money-flag/ind.webp">
+                  <img src="../images/money-flag/ind.webp" alt="India" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">India</span>
+                </div>
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="Pakistan" data-flag="../images/money-flag/pakistan.webp">
+                  <img src="../images/money-flag/pakistan.webp" alt="Pakistan" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">Pakistan</span>
+                </div>
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="Nepal" data-flag="../images/money-flag/nepal.webp">
+                  <img src="../images/money-flag/nepal.webp" alt="Nepal" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">Nepal</span>
+                </div>
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="Sri Lanka" data-flag="../images/money-flag/sri-lanka.webp">
+                  <img src="../images/money-flag/sri-lanka.webp" alt="Sri Lanka" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">Sri Lanka</span>
+                </div>
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="Malaysia" data-flag="../images/money-flag/malaysia.webp">
+                  <img src="../images/money-flag/malaysia.webp" alt="Malaysia" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">Malaysia</span>
+                </div>
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="Philippines" data-flag="../images/money-flag/philippines.webp">
+                  <img src="../images/money-flag/philippines.webp" alt="Philippines" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">Philippines</span>
+                </div>
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="Viatnam" data-flag="../images/money-flag/viatnam.webp">
+                  <img src="../images/money-flag/viatnam.webp" alt="Viatnam" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">Viatnam</span>
+                </div>
+                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
+                  data-name="Fiji" data-flag="../images/money-flag/fiji.webp">
+                  <img src="../images/money-flag/fiji.webp" alt="Fiji" class="w-10 h-6 mr-4">
+                  <span class="text-gray-800 font-medium">Fiji</span>
+                </div>
+              </div>
+
+
+
+
+              <!-- Submit Button -->
+              <a href="personal-details.html"
+                class="block w-full bg-blue-primary text-white text-center py-3 rounded-md font-medium hover:bg-blue-900 transition">
+                Select Country
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+
+  <script src="../src/js/script.js"></script>
+</body>
+
+</html>

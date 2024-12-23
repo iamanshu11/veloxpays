@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloxpays</title>
+
+  <link href="../dist/output.css" rel="stylesheet">
+  <link href="../src/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+
+    <div class="flex items-center justify-center min-h-screen bg-gray-50">
+      <div class="relative flex flex-col md:flex-row w-full h-screen bg-white">
+        <!-- Left Section with Full Size Image -->
+        <div class=" w-full md:w-1/2 h-auto md:h-full">
+          <!-- Top Image in Mobile View -->
+          <img src="../images/residency.png" alt="Full Size Image"
+            class="w-full h-90 md:h-full object-cover hidden md:block">
+          <!-- Logo and Cross in Mobile View -->
+          <div class="absolute top-4 left-4 md:hidden flex items-center justify-between w-full px-4">
+            <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
+            <a href="index.html" class="text-gray-600 text-2xl hover:text-gray-800 pr-5">&times;</a>
+          </div>
+          <!-- Logo at Top Left (Desktop) -->
+          <div class="absolute top-4 left-4 hidden md:block">
+            <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
+
+          </div>
+          <!-- Cross Mark at Form Right Corner (Desktop) -->
+          <div class="hidden md:block  absolute top-4 right-4">
+            <a href="index.html" class="text-gray-600 text-2xl hover:text-gray-800 ">&times;</a>
+          </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="flex-1 flex items-center justify-center p-4 md:p-8">
+          <div class="w-full max-w-xl">
+            <!-- Form Header -->
+            <h2 class="text-2xl font-bold text-blue-500 mb-2 text-center">Personal <span class="text-black">Details
+              </span></h2>
+            <p class="text-sm text-gray-500 mb-6 text-center">Fill up your basic personal details. <a href="login.html"
+                class="text-blue-500 hover:underline">Login</a> </p>
+
+            <!-- Form -->
+            <form action="#" method="POST" class="space-y-8">
+
+              <!-- First Name -->
+              <div class="flex items-center border border-gray-300 rounded-lg p-3 bg-gray-100">
+                <input type="text" class="w-full bg-transparent focus:outline-none" placeholder="First Name">
+                <i class="bx bx-user text-gray-400 text-xl"></i>
+              </div>
+
+              <!-- Last Name -->
+              <div class="flex items-center border border-gray-300 rounded-lg p-3 bg-gray-100">
+                <input type="text" class="w-full bg-transparent focus:outline-none" placeholder="Last Name">
+                <i class="bx bx-user text-gray-400 text-xl"></i>
+              </div>
+
+              <div class="flex space-x-4">
+                <!-- Date of Birth -->
+                <div class="relative flex items-center  w-1/2">
+                  <input type="text" id="dob" name="dob" placeholder="DD-MM-YYYY"
+                    class="w-full  border border-gray-300 rounded-lg p-3 bg-gray-100 "
+                    readonly>
+                  <img src="../images/Calender.png" alt="Calendar Icon"
+                    class="absolute right-3  cursor-pointer w-5 h-5 pr-1 "
+                    onclick="document.getElementById('hidden-datepicker').showPicker()">
+                  <input type="date" id="hidden-datepicker" class="absolute opacity-0 w-0 h-0"
+                    onchange="document.getElementById('dob').value = this.value.split('-').reverse().join('-')">
+                </div>
+
+
+                <!-- Nationality -->
+                <div class="w-full flex flex-col  mb-6">
+                  <div class="relative">
+                    <input 
+                      type="text" 
+                      id="nationality-drop-input" 
+                      name="nationality" 
+                      placeholder="Nationality" 
+                      class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 pr-12"
+                      oninput="filterNationalities()"
+                    >
+                    <img id="nationality-flag" src="/path/to/default-flag.png" alt="Flag" class="absolute right-3 top-2.5 w-10 h-6 hidden">
+                
+                    <ul id="nationality-drop-list" class="absolute z-10 w-full bg-white border rounded-md mt-1 max-h-40 overflow-y-auto hidden">
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Bangladesh', '../images/money-flag/bangladesh.webp')">
+                        <img src="../images/money-flag/bangladesh.webp" alt="India" class="w-10 h-6 mr-2"> Bangladesh
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('India', '../images/money-flag/ind.webp')">
+                        <img src="../images/money-flag/ind.webp" alt="USA" class="w-10 h-5 mr-2"> India
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('pakistan', '../images/money-flag/pakistan.webp')">
+                        <img src="../images/money-flag/pakistan.webp" alt="Canada" class="w-10 h-6 mr-2"> Pakistan
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Nepal', '../images/money-flag/nepal.webp')">
+                        <img src="../images/money-flag/nepal.webp" alt="Australia" class="w-10 h-6 mr-2"> Nepal
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Sri Lanka', '../images/money-flag/sri-lanka.webp')">
+                        <img src="../images/money-flag/sri-lanka.webp" alt="Germany" class="w-10 h-6 mr-2"> Sri Lanka
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Malaysia', '../images/money-flag/malaysia.webp')">
+                        <img src="../images/money-flag/malaysia.webp" alt="Germany" class="w-10 h-6 mr-2"> Malaysia
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Philippines', '../images/money-flag/philippines.webp')">
+                        <img src="../images/money-flag/philippines.webp" alt="Germany" class="w-10 h-6 mr-2"> Philippines
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Viatnam', '../images/money-flag/viatnam.webp')">
+                        <img src="../images/money-flag/viatnam.webp" alt="Germany" class="w-10 h-6 mr-2"> Viatnam
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Fiji', '../images/money-flag/fiji.webp')">
+                        <img src="../images/money-flag/fiji.webp" alt="Germany" class="w-10 h-6 mr-2"> Fiji
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+
+              </div>
+
+              <!-- Phone -->
+              <div class="w-full flex flex-col mb-6">
+                <label for="phone-number" class="text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <div class="relative flex">
+                  <div class="relative">
+                    <button 
+                      class="flex items-center px-3 py-2 border rounded-l-md bg-gray-50 hover:bg-gray-100 focus:outline-none" 
+                      onclick="toggleCountryCodeList(event)">
+                      <img id="phone-flag" src="/path/to/india-flag.png" alt="India" class="w-5 h-5 mr-2">
+                      <span id="country-code">+91</span>
+                    </button>
+                    <ul id="country-code-list" class="absolute z-10 bg-white border rounded-md mt-1 hidden max-h-40 overflow-y-auto">
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectCountryCode('+91', '/path/to/india-flag.png')">
+                        <img src="/path/to/india-flag.png" alt="India" class="w-5 h-5 mr-2"> +91 India
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectCountryCode('+1', '/path/to/usa-flag.png')">
+                        <img src="/path/to/usa-flag.png" alt="USA" class="w-5 h-5 mr-2"> +1 USA
+                      </li>
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectCountryCode('+44', '/path/to/uk-flag.png')">
+                        <img src="/path/to/uk-flag.png" alt="UK" class="w-5 h-5 mr-2"> +44 UK
+                      </li>
+                    </ul>
+                  </div>
+                  <input 
+                    type="text" 
+                    id="phone-number" 
+                    name="phone" 
+                    placeholder="Enter your phone number" 
+                    class="w-full px-4 py-2 border rounded-r-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                </div>
+              </div>
+
+
+
+              <!-- Submit Button -->
+              <a href="recover-verification.html"
+                class="block w-full bg-blue-primary text-white text-center py-3 rounded-md font-medium hover:bg-blue-900 transition">
+                Select Country
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <script src="../src/js/custom.js"></script>
+  <script src="../src/js/script.js"></script>
+</body>
+
+</html>
