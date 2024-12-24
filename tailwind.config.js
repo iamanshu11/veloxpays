@@ -15,6 +15,8 @@ module.exports = {
     './src/edit-email.html',
     './src/recover-verification-resend.html',
     './src/recover-verification-edit-email.html',
+    './src/password-changed.html',
+    './src/recover-verification.html',
   ],
   theme: {
     extend: {
