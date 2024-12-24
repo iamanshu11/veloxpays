@@ -17,6 +17,7 @@ module.exports = {
     './src/recover-verification-edit-email.html',
     './src/password-changed.html',
     './src/recover-verification.html',
+    './src/dashboard.html',
   ],
   theme: {
     extend: {
@@ -29,6 +30,9 @@ module.exports = {
       },
       backgroundImage: {
         'custom-image': "url('/images/hero-bg.png')",
+      },
+      boxShadow: {
+        'left-right-gray': '-4px 0 10px rgba(128, 128, 128, 0.3), 4px 0 10px rgba(128, 128, 128, 0.3)',
       },
     },
   },
