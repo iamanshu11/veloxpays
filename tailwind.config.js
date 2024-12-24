@@ -13,6 +13,8 @@ module.exports = {
     './src/personal-details-created.html',
     './src/resend-link.html',
     './src/edit-email.html',
+    './src/recover-verification-resend.html',
+    './src/recover-verification-edit-email.html',
   ],
   theme: {
     extend: {

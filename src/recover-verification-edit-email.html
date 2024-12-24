@@ -38,23 +38,22 @@
         <div class="flex-1 flex items-center justify-center p-4 md:p-8">
           <div class="w-full max-w-xl">
             <!-- Form Header -->
-            <h2 class="text-2xl font-bold text-blue-500 mb-2 text-center">Verify <span class="text-black"> Email</span></h2>
-            <p class="text-sm text-gray-500 mb-6 text-center">Please enter the verification code sent to your email</p>
+            <h2 class="text-2xl font-bold text-blue-500 mb-2 text-center">Edit <span class="text-black"> Email</span></h2>
+            <p class="text-sm text-gray-500 mb-6 text-center">Edit your email to verify</p>
     
             <!-- Form -->
             <form action="#" method="POST" class="space-y-8">
-              <p class="text-gray-700 mt-4 text-center">
-                We have sent a confirmation link to your given email account
-                <span class="font-medium text-green-600">dxxxxxxxxxgmail.com</span>.
-                Please confirm the verification process to continue further.
-              </p>
-
-              <!-- Action Links -->
-              <div class="flex justify-between mt-4 space-x-4">
-                <a href="recover-verification-resend.html" class="text-blue-500 font-medium hover:underline">Resend link</a>
-                <a href="edit-email.html" class="text-blue-500 font-medium hover:underline">Edit email</a>
+              <div>
+                <label for="email" class="block text-gray-600 mb-1">Your email address</label>
+                <div class="relative">
+                  <input type="email" id="email" name="email" placeholder="example@email.com"
+                         class="w-full px-4 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <button type="button" class="absolute inset-y-0 right-0 flex items-center px-3">
+                    <img src="../images/signup/mail.png" alt="Mail Icon" class="h-5 w-5">
+                  </button>
+                </div>
               </div>
-    
+
               <!-- Submit Button -->
               <a href="recover-save-pasword.html"
                 class="block w-full bg-blue-primary text-white text-center py-3 rounded-md font-medium hover:bg-blue-900 transition">
