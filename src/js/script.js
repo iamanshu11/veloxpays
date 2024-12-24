@@ -1,35 +1,56 @@
 const searchInput = document.querySelector(".residency-search-input");
 const searchFlag = document.querySelector(".residency-search-flag");
 const countryOptions = document.querySelectorAll(".residency-country-option");
-const countryList = document.querySelector(".residency-country-list");
 
-// Filter countries based on input
-searchInput.addEventListener("input", (e) => {
-    const filter = e.target.value.toLowerCase();
-    countryOptions.forEach(option => {
-        const countryName = option.dataset.name.toLowerCase();
-        if (countryName.includes(filter)) {
-            option.style.display = "flex";
-        } else {
-            option.style.display = "none";
-        }
-    });
-});
-
-// Select a country
+// Update input and flag on country selection
 countryOptions.forEach(option => {
-    option.addEventListener("click", () => {
-        const flag = option.dataset.flag;
-        const name = option.dataset.name;
+  option.addEventListener("click", () => {
+    const flag = option.getAttribute("data-flag");
+    const name = option.getAttribute("data-name");
 
-        // Update input with selected country
-        searchFlag.src = flag;
-        searchFlag.classList.remove("hidden");
-        searchInput.value = name;
-    });
+    // Update the search input and flag
+    searchInput.value = name;
+    searchFlag.src = flag;
+    searchFlag.classList.remove("hidden");
+  });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const nationalityInput = document.getElementById('nationality-drop-input');
+  const nationalityList = document.getElementById('nationality-drop-list');
+  const nationalityFlag = document.getElementById('nationality-flag');
 
+  // Show nationality dropdown on input click
+  nationalityInput.addEventListener('click', function () {
+    nationalityList.classList.remove('hidden');
+  });
+
+  // Select nationality and update input/flag
+  window.selectNationality = function (name, flagPath) {
+    nationalityInput.value = name;
+    nationalityFlag.src = flagPath;
+    nationalityFlag.classList.remove('hidden');
+    nationalityList.classList.add('hidden');
+  };
+
+  // Filter nationalities based on input
+  nationalityInput.addEventListener('input', function () {
+    const filter = nationalityInput.value.toLowerCase();
+    const items = nationalityList.querySelectorAll('li');
+
+    items.forEach(item => {
+      const text = item.textContent || item.innerText;
+      item.style.display = text.toLowerCase().includes(filter) ? "flex" : "none";
+    });
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener('click', function (event) {
+    if (!nationalityList.contains(event.target) && event.target !== nationalityInput) {
+      nationalityList.classList.add('hidden');
+    }
+  });
+});
 
 
 const burgerMenu = document.getElementById('burger-menu');
@@ -51,9 +72,9 @@ function toggleDropdown(id) {
 
   // Adjust the icon's rotation
   if (!dropdown.classList.contains('hidden')) {
-      dropdownIcon.classList.add('rotate-180');
+    dropdownIcon.classList.add('rotate-180');
   } else {
-      dropdownIcon.classList.remove('rotate-180');
+    dropdownIcon.classList.remove('rotate-180');
   }
 }
 
@@ -99,76 +120,121 @@ function filterDropdown(listId, searchId) {
 
   // Filter dropdown items
   items.forEach(item => {
-      const text = item.innerText.toLowerCase();
-      item.style.display = text.includes(searchInput) ? '' : 'none';
+    const text = item.innerText.toLowerCase();
+    item.style.display = text.includes(searchInput) ? '' : 'none';
   });
 
   // Keep dropdown icon rotated while searching
   if (!dropdown.classList.contains('hidden')) {
-      dropdownIcon.classList.add('rotate-180');
+    dropdownIcon.classList.add('rotate-180');
   } else {
-      dropdownIcon.classList.remove('rotate-180');
+    dropdownIcon.classList.remove('rotate-180');
   }
 }
 
 
-    let activeCategory = 'money'; // Default active category
+let activeCategory = 'money'; // Default active category
 
-    function showCategory(category) {
-      const categories = document.querySelectorAll('.faq-category');
-      categories.forEach(cat => {
-        if (cat.dataset.category === category) {
-          cat.classList.remove('hidden');
-        } else {
-          cat.classList.add('hidden');
-        }
-      });
-    
-      // Update active button styling
-      document.querySelectorAll('.filter-button').forEach(button => {
-        button.classList.remove('bg-blue-500', 'text-white');
-        button.classList.add('bg-gray-200');
-      });
-      const activeButton = document.getElementById(category + '-button');
-      activeButton.classList.add('bg-blue-500', 'text-white');
-      activeButton.classList.remove('bg-gray-200');
-    
-      activeCategory = category;
+function showCategory(category) {
+  const categories = document.querySelectorAll('.faq-category');
+  categories.forEach(cat => {
+    if (cat.dataset.category === category) {
+      cat.classList.remove('hidden');
+    } else {
+      cat.classList.add('hidden');
     }
-    
-    function toggleFAQ(faq) {
-      const content = document.getElementById(faq);
-      const arrow = document.querySelector(`[data-arrow="${faq}"]`);
-      content.classList.toggle('hidden');
-      arrow.classList.toggle('rotate-180');
+  });
+
+  // Update active button styling
+  document.querySelectorAll('.filter-button').forEach(button => {
+    button.classList.remove('bg-blue-500', 'text-white');
+    button.classList.add('bg-gray-200');
+  });
+  const activeButton = document.getElementById(category + '-button');
+  activeButton.classList.add('bg-blue-500', 'text-white');
+  activeButton.classList.remove('bg-gray-200');
+
+  activeCategory = category;
+}
+
+function toggleFAQ(faq) {
+  const content = document.getElementById(faq);
+  const arrow = document.querySelector(`[data-arrow="${faq}"]`);
+  content.classList.toggle('hidden');
+  arrow.classList.toggle('rotate-180');
+}
+
+window.onload = () => {
+  showCategory(activeCategory);
+};
+
+
+
+function togglePassword(fieldId, iconId, imgId) {
+  const input = document.getElementById(fieldId);
+  const eyeIcon = document.getElementById(imgId);
+
+  if (input.type === 'password') {
+    input.type = 'text';
+    eyeIcon.src = '../images/signup/visible.png';
+  } else {
+    input.type = 'password';
+    eyeIcon.src = '../images/signup/hide.png';
+  }
+}
+
+
+
+
+
+
+
+
+
+// Toggle the country code list dropdown
+function toggleCountryCodeList(event) {
+  event.stopPropagation();
+  const countryCodeList = document.getElementById('country-code-list');
+  countryCodeList.classList.toggle('hidden');
+}
+
+// Filter country codes based on search input
+function filterCountryCodes(event) {
+  const searchValue = event.target.value.toLowerCase();
+  const options = document.querySelectorAll('#country-code-options li');
+
+  options.forEach(option => {
+    const text = option.textContent.toLowerCase();
+    if (text.includes(searchValue)) {
+      option.classList.remove('hidden');
+    } else {
+      option.classList.add('hidden');
     }
-    
-    window.onload = () => {
-      showCategory(activeCategory); // Initialize with default active category
-    };
+  });
+}
 
+// Select country code and update the flag and code (only on button)
+function selectCountryCode(element) {
+  const phoneFlag = document.getElementById('phone-flag');
+  const countryCode = document.getElementById('country-code');
 
-    // function togglePasswordVisibility(id, button) {
-    //   const input = document.getElementById(id);
-    //   const isPassword = input.type === 'password';
-    //   input.type = isPassword ? 'text' : 'password';
-    //   button.innerHTML = isPassword 
-    //     ? '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12l-3 3m0 0l-3-3m3 3V9m3 3a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>' 
-    //     : '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12a9 9 0 0118 0 9 9 0 01-18 0zm9 3a3 3 0 100-6 3 3 0 000 6z" /></svg>';
-    // }
+  const flagSrc = element.getAttribute('data-flag');
+  const code = element.getAttribute('data-code');
 
+  phoneFlag.src = flagSrc;
+  countryCode.textContent = code;
 
-    function togglePassword(fieldId, iconId, imgId) {
-      const input = document.getElementById(fieldId);
-      const eyeIcon = document.getElementById(imgId);
+  // Close the dropdown after selection
+  const countryCodeList = document.getElementById('country-code-list');
+  countryCodeList.classList.add('hidden');
+}
 
-      if (input.type === 'password') {
-        input.type = 'text';
-        eyeIcon.src = '../images/signup/visible.png';
-      } else {
-        input.type = 'password';
-        eyeIcon.src = '../images/signup/hide.png';
-      }
-    }
+// Close dropdown if clicked outside
+document.addEventListener('click', (event) => {
+  const countryCodeList = document.getElementById('country-code-list');
+  const dropdownButton = event.target.closest('button');
 
-
+  if (!countryCodeList.classList.contains('hidden') && !dropdownButton) {
+    countryCodeList.classList.add('hidden');
+  }
+});

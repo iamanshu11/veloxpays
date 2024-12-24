@@ -18,7 +18,7 @@
         <!-- Left Section with Full Size Image -->
         <div class=" w-full md:w-1/2 h-auto md:h-full">
           <!-- Top Image in Mobile View -->
-          <img src="../images/residency.png" alt="Full Size Image"
+          <img src="../images/personal/personal-bg.png" alt="Full Size Image"
             class="w-full h-90 md:h-full object-cover hidden md:block">
           <!-- Logo and Cross in Mobile View -->
           <div class="absolute top-4 left-4 md:hidden flex items-center justify-between w-full px-4">
@@ -49,23 +49,22 @@
             <form action="#" method="POST" class="space-y-8">
 
               <!-- First Name -->
-              <div class="flex items-center border border-gray-300 rounded-lg p-3 bg-gray-100">
+              <div class="flex items-center w-full px-4 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <input type="text" class="w-full bg-transparent focus:outline-none" placeholder="First Name">
-                <i class="bx bx-user text-gray-400 text-xl"></i>
+                <img src="../images/personal/person.png" alt="Mail Icon" class="h-5 w-5">
               </div>
 
               <!-- Last Name -->
-              <div class="flex items-center border border-gray-300 rounded-lg p-3 bg-gray-100">
+              <div class="flex items-center px-4 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <input type="text" class="w-full bg-transparent focus:outline-none" placeholder="Last Name">
-                <i class="bx bx-user text-gray-400 text-xl"></i>
+                <img src="../images/personal/person.png" alt="Mail Icon" class="h-5 w-5">
               </div>
-
+ 
               <div class="flex space-x-4">
                 <!-- Date of Birth -->
                 <div class="relative flex items-center  w-1/2">
                   <input type="text" id="dob" name="dob" placeholder="DD-MM-YYYY"
-                    class="w-full  border border-gray-300 rounded-lg p-3 bg-gray-100 "
-                    readonly>
+                    class="w-full  px-4 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 " readonly>
                   <img src="../images/Calender.png" alt="Calendar Icon"
                     class="absolute right-3  cursor-pointer w-5 h-5 pr-1 "
                     onclick="document.getElementById('hidden-datepicker').showPicker()">
@@ -75,92 +74,127 @@
 
 
                 <!-- Nationality -->
-                <div class="w-full flex flex-col  mb-6">
+                <div class="w-1/2 flex flex-col">
                   <div class="relative">
-                    <input 
-                      type="text" 
-                      id="nationality-drop-input" 
-                      name="nationality" 
-                      placeholder="Nationality" 
-                      class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 pr-12"
-                      oninput="filterNationalities()"
-                    >
-                    <img id="nationality-flag" src="/path/to/default-flag.png" alt="Flag" class="absolute right-3 top-2.5 w-10 h-6 hidden">
+                    <input type="text" id="nationality-drop-input" name="nationality" placeholder="Nationality"
+                      class="w-full  px-4 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      oninput="filterNationalities()">
+                    <img id="nationality-flag" src="../images/money-flag/bangladesh.webp" alt="Flag"
+                      class="absolute right-3 top-2.5 w-10 h-6 hidden">
                 
-                    <ul id="nationality-drop-list" class="absolute z-10 w-full bg-white border rounded-md mt-1 max-h-40 overflow-y-auto hidden">
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Bangladesh', '../images/money-flag/bangladesh.webp')">
-                        <img src="../images/money-flag/bangladesh.webp" alt="India" class="w-10 h-6 mr-2"> Bangladesh
+                    <ul id="nationality-drop-list"
+                      class="absolute z-10 w-full bg-white border rounded-md mt-1 max-h-40 overflow-y-auto hidden">
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('Bangladesh', '../images/money-flag/bangladesh.webp')">
+                        <img src="../images/money-flag/bangladesh.webp" alt="Bangladesh" class="w-10 h-6 mr-2"> Bangladesh
                       </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('India', '../images/money-flag/ind.webp')">
-                        <img src="../images/money-flag/ind.webp" alt="USA" class="w-10 h-5 mr-2"> India
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('India', '../images/money-flag/ind.webp')">
+                        <img src="../images/money-flag/ind.webp" alt="India" class="w-10 h-5 mr-2"> India
                       </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('pakistan', '../images/money-flag/pakistan.webp')">
-                        <img src="../images/money-flag/pakistan.webp" alt="Canada" class="w-10 h-6 mr-2"> Pakistan
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('Pakistan', '../images/money-flag/pakistan.webp')">
+                        <img src="../images/money-flag/pakistan.webp" alt="Pakistan" class="w-10 h-6 mr-2"> Pakistan
                       </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Nepal', '../images/money-flag/nepal.webp')">
-                        <img src="../images/money-flag/nepal.webp" alt="Australia" class="w-10 h-6 mr-2"> Nepal
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('Nepal', '../images/money-flag/nepal.webp')">
+                        <img src="../images/money-flag/nepal.webp" alt="Nepal" class="w-10 h-6 mr-2"> Nepal
                       </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Sri Lanka', '../images/money-flag/sri-lanka.webp')">
-                        <img src="../images/money-flag/sri-lanka.webp" alt="Germany" class="w-10 h-6 mr-2"> Sri Lanka
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('Sri Lanka', '../images/money-flag/sri-lanka.webp')">
+                        <img src="../images/money-flag/sri-lanka.webp" alt="Sri Lanka" class="w-10 h-6 mr-2"> Sri Lanka
                       </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Malaysia', '../images/money-flag/malaysia.webp')">
-                        <img src="../images/money-flag/malaysia.webp" alt="Germany" class="w-10 h-6 mr-2"> Malaysia
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('Malaysia', '../images/money-flag/malaysia.webp')">
+                        <img src="../images/money-flag/malaysia.webp" alt="Malaysia" class="w-10 h-6 mr-2"> Malaysia
                       </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Philippines', '../images/money-flag/philippines.webp')">
-                        <img src="../images/money-flag/philippines.webp" alt="Germany" class="w-10 h-6 mr-2"> Philippines
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('Philippines', '../images/money-flag/philippines.webp')">
+                        <img src="../images/money-flag/philippines.webp" alt="Philippines" class="w-10 h-6 mr-2"> Philippines
                       </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Viatnam', '../images/money-flag/viatnam.webp')">
-                        <img src="../images/money-flag/viatnam.webp" alt="Germany" class="w-10 h-6 mr-2"> Viatnam
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('Vietnam', '../images/money-flag/viatnam.webp')">
+                        <img src="../images/money-flag/viatnam.webp" alt="Vietnam" class="w-10 h-6 mr-2"> Vietnam
                       </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectNationality('Fiji', '../images/money-flag/fiji.webp')">
-                        <img src="../images/money-flag/fiji.webp" alt="Germany" class="w-10 h-6 mr-2"> Fiji
+                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                        onclick="selectNationality('Fiji', '../images/money-flag/fiji.webp')">
+                        <img src="../images/money-flag/fiji.webp" alt="Fiji" class="w-10 h-6 mr-2"> Fiji
                       </li>
                     </ul>
                   </div>
                 </div>
-                
-
+    
               </div>
 
-              <!-- Phone -->
               <div class="w-full flex flex-col mb-6">
-                <label for="phone-number" class="text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <!-- <label for="phone-number" class="text-sm font-medium text-gray-700 mb-2">Phone Number</label> -->
                 <div class="relative flex">
+                  <!-- Button to Select Flag and Code -->
                   <div class="relative">
-                    <button 
-                      class="flex items-center px-3 py-2 border rounded-l-md bg-gray-50 hover:bg-gray-100 focus:outline-none" 
+                    <button
+                      type="button"
+                      class="flex items-center px-4 pr-8 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       onclick="toggleCountryCodeList(event)">
-                      <img id="phone-flag" src="/path/to/india-flag.png" alt="India" class="w-5 h-5 mr-2">
+                      <img id="phone-flag" src="../images/money-flag/ind.webp" alt="India" class="w-10 h-5 mr-2">
                       <span id="country-code">+91</span>
                     </button>
-                    <ul id="country-code-list" class="absolute z-10 bg-white border rounded-md mt-1 hidden max-h-40 overflow-y-auto">
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectCountryCode('+91', '/path/to/india-flag.png')">
-                        <img src="/path/to/india-flag.png" alt="India" class="w-5 h-5 mr-2"> +91 India
-                      </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectCountryCode('+1', '/path/to/usa-flag.png')">
-                        <img src="/path/to/usa-flag.png" alt="USA" class="w-5 h-5 mr-2"> +1 USA
-                      </li>
-                      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center" onclick="selectCountryCode('+44', '/path/to/uk-flag.png')">
-                        <img src="/path/to/uk-flag.png" alt="UK" class="w-5 h-5 mr-2"> +44 UK
-                      </li>
-                    </ul>
+                    <!-- Country Code Dropdown -->
+                    <div id="country-code-list" class="absolute z-10 bg-white border rounded-md mt-1 max-h-40 overflow-y-auto hidden">
+                      <input
+                        type="text"
+                        class="w-full px-5  py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Search..."
+                        onkeyup="filterCountryCodes(event)">
+                      <ul class="mt-2" id="country-code-options">
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+91" data-flag="../images/money-flag/ind.webp">
+                          <img src="../images/money-flag/ind.webp" alt="India" class="w-10 h-5 mr-2"> +91
+                        </li>
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+880" data-flag="../images/money-flag/bangladesh.webp">
+                          <img src="../images/money-flag/bangladesh.webp" alt="Bangladesh" class="w-10 h-5 mr-2"> +880
+                        </li>
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+92" data-flag="../images/money-flag/pakistan.webp">
+                          <img src="../images/money-flag/pakistan.webp" alt="palistan" class="w-10 h-5 mr-2"> +92
+                        </li>
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+94" data-flag="../images/money-flag/sri-lanka.webp">
+                          <img src="../images/money-flag/sri-lanka.webp" alt="palistan" class="w-10 h-5 mr-2"> +94
+                        </li>
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+977" data-flag="../images/money-flag/nepal.webp">
+                          <img src="../images/money-flag/nepal.webp" alt="palistan" class="w-10 h-5 mr-2"> +977
+                        </li>
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+60" data-flag="../images/money-flag/malaysia.webp">
+                          <img src="../images/money-flag/malaysia.webp" alt="palistan" class="w-10 h-5 mr-2"> +60
+                        </li>
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+63" data-flag="../images/money-flag/philippines.webp">
+                          <img src="../images/money-flag/philippines.webp" alt="palistan" class="w-10 h-5 mr-2"> +63
+                        </li>
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+84" data-flag="../images/money-flag/viatnam.webp">
+                          <img src="../images/money-flag/viatnam.webp" alt="palistan" class="w-10 h-5 mr-2"> +84
+                        </li>
+                        <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-gray-100"
+                          onclick="selectCountryCode(this)" data-code="+679" data-flag="../images/money-flag/fiji.webp">
+                          <img src="../images/money-flag/fiji.webp" alt="palistan" class="w-10 h-5 mr-2"> +679
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <input 
-                    type="text" 
-                    id="phone-number" 
-                    name="phone" 
-                    placeholder="Enter your phone number" 
-                    class="w-full px-4 py-2 border rounded-r-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  >
+                  <!-- Editable Input for Phone Number (No Country Code) -->
+                  <input type="text" id="phone-number" name="phone" placeholder="Enter your phone number"
+                    class="w-full px-4 py-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
               </div>
-
-
-
+              
               <!-- Submit Button -->
-              <a href="recover-verification.html"
+              <a href="personal-details-created.html"
                 class="block w-full bg-blue-primary text-white text-center py-3 rounded-md font-medium hover:bg-blue-900 transition">
-                Select Country
+                Continue
               </a>
             </form>
           </div>
@@ -171,7 +205,6 @@
   </main>
 
 
-  <script src="../src/js/custom.js"></script>
   <script src="../src/js/script.js"></script>
 </body>
 

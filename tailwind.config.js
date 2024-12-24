@@ -10,6 +10,9 @@ module.exports = {
     './src/recover-save-pasword.html',
     './src/select-residency.html',
     './src/personal-details.html',
+    './src/personal-details-created.html',
+    './src/resend-link.html',
+    './src/edit-email.html',
   ],
   theme: {
     extend: {
