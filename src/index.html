@@ -26,7 +26,7 @@
         <a href="#" class="text-gray-600 hover:text-blue-700">Contact</a>
         <a href="login.html">
           <button
-          class="px-4 py-2 border border-blue-700 text-blue-700 rounded-full hover:bg-blue-100 transition">Login</button>
+            class="px-4 py-2 border border-blue-700 text-blue-700 rounded-full hover:bg-blue-100 transition">Login</button>
         </a>
         <a href="sign-up.html">
           <button class="px-4 py-2 bg-blue-900 text-white  rounded-full hover:bg-blue-700 transition">SignUp</button>
@@ -55,7 +55,7 @@
         <a href="#" class="text-gray-600 text-lg hover:text-blue-800">Contact</a>
         <a href="login.html">
           <button
-          class="px-4 py-2 border border-blue-700 text-blue-700 rounded-full hover:bg-blue-100 transition">Login</button>
+            class="px-4 py-2 border border-blue-700 text-blue-700 rounded-full hover:bg-blue-100 transition">Login</button>
         </a>
         <a href="sign-up.html">
           <button class="px-4 py-2 bg-blue-900 text-white  rounded-full hover:bg-blue-700 transition">SignUp</button>
@@ -66,7 +66,9 @@
 
   <main>
 
-    <section class="min-h-screen flex items-center justify-center px-6 bg-[#01133F] text-white pt-120">
+    <section
+      class="min-h-screen flex items-center justify-center px-6 text-white pt-120 bg-[#01133F] relative bg-cover bg-center bg-no-repeat"
+      style="background-image: url('../images/hero-bg.png');">
       <div class="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between">
         <!-- Left Section -->
         <div class="lg:w-1/2 mb-12 lg:mb-0">
@@ -78,7 +80,7 @@
               No Charge
             </span>
           </h1>
-          
+    
           <p class="mt-6 text-gray-300 text-sm lg:text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et
@@ -95,211 +97,254 @@
         </div>
     
         <!-- Right Section -->
-        <div class="lg:w-1/3 bg-white text-black rounded-lg shadow-lg p-6 lg:p-8 relative">
-          <form class="relative">
-            <!-- Input Section for Sending Money -->
-            <div class="mb-6 relative">
-              <label for="amount" class="block text-sm font-medium text-gray-700">You send</label>
-              <div class="flex items-center border rounded-md mt-2 relative">
-                <input type="text" id="amount" placeholder="Enter amount"
-                  class="w-full px-3 py-2 text-gray-800 focus:outline-none rounded-l-md" />
-                  <button type="button" id="currency-button" class="inline-flex items-center bg-gray-100 px-4 py-3 rounded-r-md focus:outline-none relative w-full max-w-max" onclick="toggleDropdown('currency-dropdown')">
+        <div class="lg:w-1/3  text-black rounded-lg shadow-lg p-2 lg:p-4 relative"
+          style="background-image: url('../images/card-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    
+          <div class="bg-white text-black rounded-lg shadow-lg p-2 lg:p-8 relative">
+            <form class="relative">
+              <!-- Input Section for Sending Money -->
+              <div class="mb-6 relative">
+                <label for="amount" class="block text-sm font-medium text-gray-700">You send</label>
+                <div class="flex items-center border rounded-md mt-2 relative">
+                  <input type="text" id="amount" placeholder="Enter amount"
+                    class="w-full px-3 py-2 text-gray-800 focus:outline-none rounded-l-md" />
+                  <button type="button" id="currency-button"
+                    class="inline-flex items-center bg-gray-100 px-4 py-3 rounded-r-md focus:outline-none relative w-full max-w-max"
+                    onclick="toggleDropdown('currency-dropdown')">
                     <img src="../images/money-flag/bangladesh.webp" alt="GBP Flag" class="h-5 mr-2" id="selected-flag" />
                     <span id="selected-currency" class="text-sm font-medium mr-2">BDT</span>
-                    <svg id="dropdown-icon" class="w-5 h-5 text-gray-700 ml-2 transition-transform transform" fill="currentColor" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    <svg id="dropdown-icon" class="w-5 h-5 text-gray-700 ml-2 transition-transform transform"
+                      fill="currentColor" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
-                </button>
-              </div>
-      
-              <!-- Currency Dropdown -->
-              <div id="currency-dropdown"
-                class="hidden absolute top-full left-0 w-full border border-gray-300 bg-white rounded-md shadow-lg z-50 max-h-40 overflow-y-auto">
-                <div class="p-2">
-                  <input type="text" id="currency-search" placeholder="Search currency..."
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none"
-                    oninput="filterDropdown('currency-dropdown', 'currency-search')" />
+                  </button>
                 </div>
-                <ul class="divide-y divide-gray-200">
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectCurrency('../images/money-flag/bangladesh.webp', 'BDT')">
-                    <img src="../images/money-flag/bangladesh.webp" alt="BDT Flag" class="h-5 mr-2" />
-                    <span>BDT - Bangladeshi Taka</span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectCurrency('../images/money-flag/ind.webp', 'INR')">
-                    <img src="../images/money-flag/ind.webp" alt="INR Flag" class="h-5 mr-2" />
-                    <span>INR - Indian Rupee</span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectCurrency('../images/money-flag/pakistan.webp', 'PKR')">
-                    <img src="../images/money-flag/pakistan.webp" alt="PAK Flag" class="h-5 mr-2" />
-                    <span>PKR - Pakistani Rupee </span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectCurrency('../images/money-flag/nepal.webp', 'NPR')">
-                    <img src="../images/money-flag/nepal.webp" alt="NGN Flag" class="h-5 mr-2" />
-                    <span>NPR - Nepalese Rupee</span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectCurrency('../images/money-flag/sri-lanka.webp', 'LKR')">
-                    <img src="../images/money-flag/sri-lanka.webp" alt="LKR Flag" class="h-5 mr-2" />
-                    <span>LKR - Sri Lankan Rupee</span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                  onclick="selectCurrency('../images/money-flag/malaysia.webp', 'MYR')">
-                  <img src="../images/money-flag/malaysia.webp" alt="MYR Flag" class="h-5 mr-2" />
-                  <span>MYR - Malaysian Ringgit</span>
-                </li>
-                <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                onclick="selectCurrency('../images/money-flag/philippines.webp', 'PHP')">
-                <img src="../images/money-flag/philippines.webp" alt="PHP Flag" class="h-5 mr-2" />
-                <span>PHP - Philippine Peso</span>
-              </li>
-              <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                onclick="selectCurrency('../images/money-flag/viatnam.webp', 'VND')">
-                <img src="../images/money-flag/viatnam.webp" alt="PHP Flag" class="h-5 mr-2" />
-                <span>VND - Vietnamese Dong</span>
-              </li>
-              <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                onclick="selectCurrency('../images/money-flag/fiji.webp', 'FJD')">
-                <img src="../images/money-flag/fiji.webp" alt="FJD Flag" class="h-5 mr-2" />
-                <span>FJD - Fijian dollar</span>
-              </li>
-                </ul>
-              </div>
-            </div>
     
-            <!-- Transaction Breakdown -->
-            <div class="space-y-4 text-gray-600">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="text-gray-400">+</span>
-                  <span>£ 0.00</span>
+                <!-- Currency Dropdown -->
+                <div id="currency-dropdown"
+                  class="hidden absolute top-full left-0 w-full border border-gray-300 bg-white rounded-md shadow-lg z-50 max-h-40 overflow-y-auto">
+                  <div class="p-2">
+                    <input type="text" id="currency-search" placeholder="Search currency..."
+                      class="w-full px-3 py-2 border rounded-md focus:outline-none"
+                      oninput="filterDropdown('currency-dropdown', 'currency-search')" />
+                  </div>
+                  <ul class="divide-y divide-gray-200">
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/bangladesh.webp', 'BDT')">
+                      <img src="../images/money-flag/bangladesh.webp" alt="BDT Flag" class="h-5 mr-2" />
+                      <span>BDT - Bangladeshi Taka</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/ind.webp', 'INR')">
+                      <img src="../images/money-flag/ind.webp" alt="INR Flag" class="h-5 mr-2" />
+                      <span>INR - Indian Rupee</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/pakistan.webp', 'PKR')">
+                      <img src="../images/money-flag/pakistan.webp" alt="PAK Flag" class="h-5 mr-2" />
+                      <span>PKR - Pakistani Rupee </span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/nepal.webp', 'NPR')">
+                      <img src="../images/money-flag/nepal.webp" alt="NGN Flag" class="h-5 mr-2" />
+                      <span>NPR - Nepalese Rupee</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/sri-lanka.webp', 'LKR')">
+                      <img src="../images/money-flag/sri-lanka.webp" alt="LKR Flag" class="h-5 mr-2" />
+                      <span>LKR - Sri Lankan Rupee</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/malaysia.webp', 'MYR')">
+                      <img src="../images/money-flag/malaysia.webp" alt="MYR Flag" class="h-5 mr-2" />
+                      <span>MYR - Malaysian Ringgit</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/philippines.webp', 'PHP')">
+                      <img src="../images/money-flag/philippines.webp" alt="PHP Flag" class="h-5 mr-2" />
+                      <span>PHP - Philippine Peso</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/viatnam.webp', 'VND')">
+                      <img src="../images/money-flag/viatnam.webp" alt="PHP Flag" class="h-5 mr-2" />
+                      <span>VND - Vietnamese Dong</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectCurrency('../images/money-flag/fiji.webp', 'FJD')">
+                      <img src="../images/money-flag/fiji.webp" alt="FJD Flag" class="h-5 mr-2" />
+                      <span>FJD - Fijian dollar</span>
+                    </li>
+                  </ul>
                 </div>
-                <span class="text-sm">Transaction fees</span>
               </div>
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="text-gray-400">></span>
-                  <span>£ 100.00</span>
+    
+              <!-- Transaction Breakdown -->
+              <div class="space-y-4 text-gray-600">
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-gray-400">+</span>
+                    <span>£ 0.00</span>
+                  </div>
+                  <span class="text-sm">Transaction fees</span>
                 </div>
-                <span class="text-sm">Converted amount</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <span class="text-gray-400">x</span>
-                  <span>£ 20</span>
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-gray-400">></span>
+                    <span>£ 100.00</span>
+                  </div>
+                  <span class="text-sm">Converted amount</span>
                 </div>
-                <span class="text-sm">Exchange rate</span>
-              </div>
-            </div>
-    
-            <!-- Input Section for Recipient Gets -->
-            <div class="mb-6 relative mt-4">
-              <label for="recipient-amount" class="block text-sm font-medium text-gray-700">Recipient
-                gets</label>
-              <div class="flex items-center border rounded-md mt-2 relative">
-                <input type="" id="recipient-amount" placeholder="Enter amount"
-                  class="w-full px-3 py-2 text-gray-800 focus:outline-none rounded-l-md" />
-                  <button type="button" id="recipient-currency-button"
-                  class="inline-flex items-center bg-gray-100 px-4 py-3 rounded-r-md focus:outline-none relative w-full max-w-max"
-                  onclick="toggleDropdown('recipient-currency-dropdown')">
-                  <img src="../images/money-flag/sri-lanka.webp" alt="NGN Flag" class="h-5 mr-2" id="recipient-flag" />
-                  <span id="recipient-currency" class="text-sm font-medium mr-2">LKR</span>
-                  <svg class="w-5 h-5 text-gray-700 ml-2" id="dropdown-icon" fill="currentColor" stroke="currentColor"
-                    stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-    
-              <!-- Recipient Currency Dropdown -->
-              <div id="recipient-currency-dropdown"
-                class="hidden absolute top-full left-0 w-full border border-gray-300 bg-white rounded-md shadow-lg z-50 max-h-40 overflow-y-auto">
-                <div class="p-2">
-                  <input type="text" id="recipient-currency-search" placeholder="Search currency..."
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none"
-                    oninput="filterDropdown('recipient-currency-dropdown', 'recipient-currency-search')" />
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-gray-400">x</span>
+                    <span>£ 20</span>
+                  </div>
+                  <span class="text-sm">Exchange rate</span>
                 </div>
-                <ul class="divide-y divide-gray-200">
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/sri-lanka.webp', 'LKR')">
-                    <img src="../images/money-flag/sri-lanka.webp" alt="NGN Flag" class="h-5 mr-2" />
-                    <span>LKR - Sri Lankan Rupee</span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/bangladesh.webp', 'BDT')">
-                    <img src="../images/money-flag/bangladesh.webp" alt="BDT Flag" class="h-5 mr-2" />
-                    <span>BDT - Bangladeshi Taka</span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/ind.webp', 'INR')">
-                    <img src="../images/money-flag/ind.webp" alt="INR Flag" class="h-5 mr-2" />
-                    <span>INR - Indian Rupee</span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/pakistan.webp', 'PKR')">
-                    <img src="../images/money-flag/pakistan.webp" alt="PKR Flag" class="h-5 mr-2" />
-                    <span>PKR - Pakistani Rupee </span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/nepal.webp', 'NPR')">
-                    <img src="../images/money-flag/nepal.webp" alt="NPR Flag" class="h-5 mr-2" />
-                    <span>NPR - Nepalese Rupee </span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/malaysia.webp', 'MYR')">
-                    <img src="../images/money-flag/malaysia.webp" alt="MYR Flag" class="h-5 mr-2" />
-                    <span>MYR - Malaysian Ringgit </span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/philippines.webp', 'PHP')">
-                    <img src="../images/money-flag/philippines.webp" alt="PHP Flag" class="h-5 mr-2" />
-                    <span>PHP - Philippine Peso </span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/viatnam.webp', 'VND')">
-                    <img src="../images/money-flag/viatnam.webp" alt="VND Flag" class="h-5 mr-2" />
-                    <span>VND - Vietnamese Dong </span>
-                  </li>
-                  <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
-                    onclick="selectRecipientCurrency('../images/money-flag/fiji.webp', 'FJD')">
-                    <img src="../images/money-flag/fiji.webp" alt="FJD Flag" class="h-5 mr-2" />
-                    <span>FJD - Fijian dollar </span>
-                  </li>
-                </ul>
               </div>
-            </div>
     
-            <!-- Get Started Button -->
-            <button
-              class="w-full bg-blue-primary text-white text-lg font-medium py-3 mt-6 rounded-md hover:bg-blue-secondary">
-              Get Started
-            </button>
+              <!-- Input Section for Recipient Gets -->
+
+              <div class="mb-6 relative mt-4">
+                <div class="border rounded-md overflow-hidden">
+                  <div class="relative">
+                    <label for="recipient-amount"
+                      class="absolute text-sm font-medium text-gray-700 top-[-0.5rem] left-3 bg-white px-2">
+                      Recipient gets
+                    </label>
+                    <div class="flex justify-end">
+                      <!-- Input Field -->
+                      <input 
+                        type="text" 
+                        id="recipient-amount" 
+                        placeholder="Enter amount" 
+                        class="flex-grow max-w-[65%] px-3 py-3 text-gray-800 focus:outline-none border-none" 
+                      />
+                      <!-- Button -->
+                      <button 
+                        type="button" 
+                        id="recipient-currency-button" 
+                        class="inline-flex items-center bg-gray-100 px-4 py-3 focus:outline-none flex-shrink max-w-[35%] border-l"
+                        onclick="toggleDropdown('recipient-currency-dropdown')"
+                      >
+                        <img 
+                          src="../images/money-flag/sri-lanka.webp" 
+                          alt="NGN Flag" 
+                          class="h-5 mr-2" 
+                          id="recipient-flag" 
+                        />
+                        <span id="recipient-currency" class="text-sm font-medium">
+                          LKR
+                        </span>
+                        <svg 
+                          class="w-5 h-5 text-gray-700 ml-auto" 
+                          id="dropdown-icon" 
+                          fill="currentColor" 
+                          stroke="currentColor" 
+                          stroke-width="2" 
+                          viewBox="0 0 24 24" 
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            d="M19 9l-7 7-7-7" 
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              
+            
+                <!-- Recipient Currency Dropdown -->
+                <div id="recipient-currency-dropdown"
+                  class="hidden absolute top-full left-0 w-full border border-gray-300 bg-white rounded-md shadow-lg z-50 max-h-40 overflow-y-auto">
+                  <div class="p-2">
+                    <input type="text" id="recipient-currency-search" placeholder="Search currency..."
+                      class="w-full px-3 py-2 border rounded-md focus:outline-none"
+                      oninput="filterDropdown('recipient-currency-dropdown', 'recipient-currency-search')" />
+                  </div>
+                  <ul class="divide-y divide-gray-200">
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/sri-lanka.webp', 'LKR')">
+                      <img src="../images/money-flag/sri-lanka.webp" alt="NGN Flag" class="h-5 mr-2" />
+                      <span>LKR - Sri Lankan Rupee</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/bangladesh.webp', 'BDT')">
+                      <img src="../images/money-flag/bangladesh.webp" alt="BDT Flag" class="h-5 mr-2" />
+                      <span>BDT - Bangladeshi Taka</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/ind.webp', 'INR')">
+                      <img src="../images/money-flag/ind.webp" alt="INR Flag" class="h-5 mr-2" />
+                      <span>INR - Indian Rupee</span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/pakistan.webp', 'PKR')">
+                      <img src="../images/money-flag/pakistan.webp" alt="PKR Flag" class="h-5 mr-2" />
+                      <span>PKR - Pakistani Rupee </span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/nepal.webp', 'NPR')">
+                      <img src="../images/money-flag/nepal.webp" alt="NPR Flag" class="h-5 mr-2" />
+                      <span>NPR - Nepalese Rupee </span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/malaysia.webp', 'MYR')">
+                      <img src="../images/money-flag/malaysia.webp" alt="MYR Flag" class="h-5 mr-2" />
+                      <span>MYR - Malaysian Ringgit </span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/philippines.webp', 'PHP')">
+                      <img src="../images/money-flag/philippines.webp" alt="PHP Flag" class="h-5 mr-2" />
+                      <span>PHP - Philippine Peso </span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/viatnam.webp', 'VND')">
+                      <img src="../images/money-flag/viatnam.webp" alt="VND Flag" class="h-5 mr-2" />
+                      <span>VND - Vietnamese Dong </span>
+                    </li>
+                    <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer"
+                      onclick="selectRecipientCurrency('../images/money-flag/fiji.webp', 'FJD')">
+                      <img src="../images/money-flag/fiji.webp" alt="FJD Flag" class="h-5 mr-2" />
+                      <span>FJD - Fijian dollar </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
     
-            <!-- Terms -->
-            <p class="text-xs text-gray-500 text-center mt-4">
-              By clicking continue, you agree to our Terms and Conditions.
-            </p>
+              <!-- Get Started Button -->
+              <button
+                class="w-full bg-blue-primary text-white text-lg font-medium py-3 mt-6 rounded-md hover:bg-blue-secondary">
+                Get Started
+              </button>
     
-            <!-- Additional Info -->
-            <div class="flex justify-center items-center space-x-4 text-gray-400 text-xs mt-4">
-              <span>Bank Transfer</span>
-              <span>SEPA</span>
-            </div>
+              <!-- Terms -->
+              <p class="text-xs text-gray-500 text-center mt-4">
+                By clicking continue, you agree to our Terms and Conditions.
+              </p>
     
-            <p class="text-xs text-gray-400 text-center mt-4">
-              We are Authorised and Regulated by the Financial Conduct Authority (FCA).
-            </p>
-          </form>
+              <!-- Additional Info -->
+              <div class="flex justify-center items-center space-x-4 text-gray-400 text-xs mt-4">
+                <span>Bank Transfer</span>
+                <span>SEPA</span>
+              </div>
+    
+              <p class="text-xs text-gray-400 text-center mt-4">
+                We are Authorised and Regulated by the Financial Conduct Authority (FCA).
+              </p>
+            </form>
+    
+          </div>
     
         </div>
-    
       </div>
     </section>
 
-    <section class="min-h-screen bg-white flex items-center px-6">
+    <section class="min-h-screen bg-white flex items-center py-16">
       <div class="container mx-auto flex flex-col  lg:flex-row items-center lg:items-center justify-between">
         <!-- Left Content -->
         <div class="lg:w-1/3 mb-12 lg:mb-0">
@@ -363,7 +408,7 @@
       </div>
     </section>
 
-    <section class="bg-blue-100 min-h-screen flex items-center px-6">
+    <section class="bg-blue-100 min-h-screen flex items-center py-16">
       <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6 md:px-12">
         <!-- Left Section -->
         <div class="md:w-1/2 mt-8 md:mt-0">
@@ -392,7 +437,7 @@
     </section>
 
 
-    <section class=" bg-white flex items-center px-6">
+    <section class=" bg-white flex items-center py-16">
       <div class="container mx-auto text-center px-6 md:px-12">
         <!-- Heading -->
         <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -406,7 +451,8 @@
         <!-- Features Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Card 1 -->
-          <div class="bg-white border border-gray-200  rounded-lg shadow-sm p-6 hover:border-blue-300 hover:bg-blue-100">
+          <div
+            class="bg-white border border-gray-200  rounded-lg shadow-sm p-6 hover:border-blue-300 hover:bg-blue-100">
             <div class="flex justify-center items-center mb-4">
               <img src="../images/bring-ic/full-secure.png" alt="Secure Payment Icon" class="w-12 h-12">
             </div>
@@ -433,7 +479,7 @@
       </div>
     </section>
 
-    <section class="bg-blue-900 pt-16 pb-0">
+    <section class="bg-blue-900 py-16">
       <div class="container mx-auto text-center px-6 md:px-12">
         <!-- Heading -->
         <h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
@@ -443,21 +489,20 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.
         </p>
-    
+
         <!-- Image Section -->
         <div class="flex justify-center items-center">
           <!-- Foreground Image -->
           <div class="w-full max-w-screen-lg h-full md:h-[500px] rounded-lg shadow-lg">
-            <img src="../images/bring.png" alt="Foreground Image"
-              class="w-full h-full object-contain rounded-lg" />
+            <img src="../images/bring.png" alt="Foreground Image" class="w-full h-full object-contain rounded-lg" />
           </div>
         </div>
       </div>
     </section>
-    
-    
 
-    <section class=" bg-white flex items-center px-6">
+
+
+    <section class=" bg-white flex items-center py-16">
       <div class="container mx-auto text-center px-6 md:px-12">
         <!-- Heading -->
         <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -471,7 +516,8 @@
         <!-- Features Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Card 1 -->
-          <div class=" bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:border-blue-300 hover:bg-blue-100">
+          <div
+            class=" bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:border-blue-300 hover:bg-blue-100">
             <div class="flex justify-center items-center mb-4">
               <img src="../images/send-money-ic/ic-1.png" alt="Secure Payment Icon" class="w-15 h-15">
             </div>
@@ -524,14 +570,15 @@
       </div>
     </section>
 
-    <section class="py-8">
+    <section class="py-16">
       <div class="container mx-auto px-6 md:px-12 text-center">
         <h2 class="text-2xl font-bold mb-4">How to Send Money Online</h2>
         <p class="text-gray-600 mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
           Quis ipsum suspe ultrices gravida. Risus commodo viverra maecenas.
         </p>
-    
+
         <!-- Carousel -->
         <div class="overflow-x-auto flex justify-start sm:justify-center items-center gap-4 mb-8">
           <button id="general-button" onclick="showCategory('general')"
@@ -555,24 +602,27 @@
             Fees and Charges
           </button>
         </div>
-    
+
         <!-- FAQ Sections -->
         <div class="faq-category hidden" data-category="general">
           <div class="bg-blue-200 p-4 rounded mb-4">
             <button onclick="toggleFAQ('faq1')" class="flex justify-between items-center w-full text-left">
               <span>What is the process of sending money online?</span>
-              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq1" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             <p id="faq1" class="hidden mt-2 text-sm text-gray-700 text-left">
-              Sending money online involves choosing a service, inputting recipient details, and confirming the transfer.
+              Sending money online involves choosing a service, inputting recipient details, and confirming the
+              transfer.
             </p>
           </div>
           <div class="bg-blue-200 p-4 rounded mb-4">
             <button onclick="toggleFAQ('faq5')" class="flex justify-between items-center w-full text-left">
               <span>How long does it take to send money online?</span>
-              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq5" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -581,12 +631,13 @@
             </p>
           </div>
         </div>
-    
+
         <div class="faq-category" data-category="money">
           <div class="bg-blue-200 p-4 rounded mb-4">
             <button onclick="toggleFAQ('faq2')" class="flex justify-between items-center w-full text-left">
               <span>Access Your Mobile to Transfer</span>
-              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq2" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -597,7 +648,8 @@
           <div class="bg-blue-200 p-4 rounded mb-4">
             <button onclick="toggleFAQ('faq6')" class="flex justify-between items-center w-full text-left">
               <span>What payment methods are supported?</span>
-              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq6" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -606,12 +658,13 @@
             </p>
           </div>
         </div>
-    
+
         <div class="faq-category hidden" data-category="cards">
           <div class="bg-blue-200 p-4 rounded mb-4">
             <button onclick="toggleFAQ('faq3')" class="flex justify-between items-center w-full text-left">
               <span>Card Payment FAQs</span>
-              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq3" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -622,7 +675,8 @@
           <div class="bg-blue-200 p-4 rounded mb-4">
             <button onclick="toggleFAQ('faq7')" class="flex justify-between items-center w-full text-left">
               <span>Are all card types accepted?</span>
-              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq7" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -631,12 +685,13 @@
             </p>
           </div>
         </div>
-    
+
         <div class="faq-category hidden" data-category="fees">
           <div class="bg-blue-200 p-4 rounded mb-4">
             <button onclick="toggleFAQ('faq4')" class="flex justify-between items-center w-full text-left">
               <span>Charges and Fees Details</span>
-              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq4" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -647,7 +702,8 @@
           <div class="bg-blue-200 p-4 rounded mb-4">
             <button onclick="toggleFAQ('faq8')" class="flex justify-between items-center w-full text-left">
               <span>Are there any hidden fees?</span>
-              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transform transition-transform" data-arrow="faq8" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -709,11 +765,11 @@
             <img src="../images/flag/fiji.png" alt="FIJI" class="w-16 h-16 rounded-full shadow-md">
             <p class="text-sm text-gray-700 mt-2">FIJI</p>
           </div>
-          
+
         </div>
       </div>
     </section>
-  
+
     <section class="bg-gray-100  md:px-16 relative -mb-16">
       <div class="container bg-blue-100 py-16 mx-auto text-center px-6 md:px-12">
         <!-- Header -->
