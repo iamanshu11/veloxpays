@@ -77,11 +77,11 @@
                     </h1>
 
                     <p class="mt-6 text-white text-sm lg:text-base">
-                      Experience seamless and secure money transfers across the globe with complete transparency and reliability.
+                        Experience seamless and secure money transfers across the globe with complete transparency and reliability.
                     </p>
 
                     <p class="mt-10 text-white text-sm lg:text-base">
-                      Available on
+                        Available on
                     </p>
                     <div class="mt-2 flex space-x-4">
                         <a href="#" class="bg-black rounded-md px-6 py-3 flex items-center space-x-3">
@@ -101,13 +101,10 @@
                             <!-- Input Section for Sending Money -->
 
                             <div class=" relative mt-2">
-                              <label for="amount" class="block text-sm font-medium text-black px-2">You Send</label>
-                              <div class="flex items-center  border rounded-[20px] mt-2 relative bg-gray-50">
-                                <input type="text" id="amount" placeholder=" $ 2500"
-                                  class="w-full text-[22px] bg-gray-50 px-3 py-3 text-gray-800 focus:outline-none rounded-[20px] "/>
-                                <button type="button" id="currency-button"
-                                  class="inline-flex items-center bg-[rgba(127,177,217,1)] px-4 py-4 rounded-r-[20px]  focus:outline-none relative w-full max-w-max"
-                                  onclick="toggleDropdown('currency-dropdown')">
+                                <label for="amount" class="block text-sm font-medium text-black px-2">You Send</label>
+                                <div class="flex items-center  border rounded-[20px] mt-2 relative bg-gray-50">
+                                    <input type="text" id="amount" placeholder=" $ 2500" class="w-full text-[22px] bg-gray-50 px-3 py-3 text-gray-800 focus:outline-none rounded-[20px] " />
+                                    <button type="button" id="currency-button" class="inline-flex items-center bg-[rgba(127,177,217,1)] px-4 py-4 rounded-r-[20px]  focus:outline-none relative w-full max-w-max" onclick="toggleDropdown('currency-dropdown')">
                                   <img src="../images/money-flag/australia.png" alt="GBP Flag" class="h-8 mr-2"
                                     id="selected-flag"/>
                                   <span id="selected-currency" class="text-sm font-medium mr-2">AUD</span>
@@ -117,7 +114,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </button>
-                              </div>
+                                </div>
 
                                 <!-- Currency Dropdown -->
                                 <div id="currency-dropdown" class="hidden absolute top-full left-0 w-full border border-gray-300 bg-white rounded-md shadow-lg z-50 max-h-40 overflow-y-auto">
@@ -125,10 +122,10 @@
                                         <input type="text" id="currency-search" placeholder="Search currency..." class="w-full px-3 py-2 border rounded-md focus:outline-none" oninput="filterDropdown('currency-dropdown', 'currency-search')" />
                                     </div>
                                     <ul class="divide-y divide-gray-200">
-                                      <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer" onclick="selectCurrency('../images/money-flag/australia.png', 'AUD')">
-                                        <img src="../images/money-flag/australia.png" alt="AUD Flag" class="h-8 mr-2" />
-                                        <span>AUD - Australian Dollar</span>
-                                    </li>
+                                        <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer" onclick="selectCurrency('../images/money-flag/australia.png', 'AUD')">
+                                            <img src="../images/money-flag/australia.png" alt="AUD Flag" class="h-8 mr-2" />
+                                            <span>AUD - Australian Dollar</span>
+                                        </li>
                                         <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer" onclick="selectCurrency('../images/money-flag/bangladesh.png', 'BDT')">
                                             <img src="../images/money-flag/bangladesh.png" alt="BDT Flag" class="h-8 mr-2" />
                                             <span>BDT - Bangladeshi Taka</span>
@@ -171,51 +168,48 @@
 
                             <!-- Transaction Breakdown -->
                             <div class="space-y-4 text-gray-600 p-[10px] relative">
-                              <!-- Vertical Dotted Line -->
-                              <div class="absolute left-[20px] top-0 bottom-0">
-                                  <div class="h-full border-l-2 border-dashed border-blue-primary/30"></div>
-                              </div>
-                          
-                              <!-- Transaction Fees -->
-                              <div class="flex justify-between items-center relative">
-                                  <div class="flex items-center space-x-2">
-                                      <span class="relative z-10 text-gray-400 bg-blue-primary rounded-full px-[9px] py-[4px] text-[12px]">+</span>
-                                      <span class="text-blue-primary">£ 0.00</span>
-                                  </div>
-                                  <span class="text-md text-blue-primary">Transaction fees</span>
-                              </div>
-                          
-                              <!-- Converted Amount -->
-                              <div class="flex justify-between items-center relative">
-                                  <div class="flex items-center space-x-2">
-                                      <span class="relative z-10 text-gray-400 bg-blue-primary rounded-full px-[9px] py-[4px] text-[12px]">></span>
-                                      <span class="text-blue-primary">£ 100.01</span>
-                                  </div>
-                                  <span class="text-md text-blue-primary">Converted amount</span>
-                              </div>
-                          
-                              <!-- Exchange Rate -->
-                              <div class="flex justify-between items-center relative">
-                                  <div class="flex items-center space-x-2">
-                                      <span class="relative z-10 text-gray-400 bg-blue-primary rounded-full px-[9px] py-[4px] text-[12px]">x</span>
-                                      <span class="text-blue-primary">20</span>
-                                  </div>
-                                  <span class="text-md text-blue-primary">Exchange rate</span>
-                              </div>
-                          </div>
-                          
+                                <!-- Vertical Dotted Line -->
+                                <div class="absolute left-[20px] top-0 bottom-0">
+                                    <div class="h-full border-l-2 border-dashed border-blue-primary/30"></div>
+                                </div>
+
+                                <!-- Transaction Fees -->
+                                <div class="flex justify-between items-center relative">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="relative z-10 text-gray-400 bg-blue-primary rounded-full px-[9px] py-[4px] text-[12px]">+</span>
+                                        <span class="text-blue-primary">£ 0.00</span>
+                                    </div>
+                                    <span class="text-md text-blue-primary">Transaction fees</span>
+                                </div>
+
+                                <!-- Converted Amount -->
+                                <div class="flex justify-between items-center relative">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="relative z-10 text-gray-400 bg-blue-primary rounded-full px-[9px] py-[4px] text-[12px]">></span>
+                                        <span class="text-blue-primary">£ 100.01</span>
+                                    </div>
+                                    <span class="text-md text-blue-primary">Converted amount</span>
+                                </div>
+
+                                <!-- Exchange Rate -->
+                                <div class="flex justify-between items-center relative">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="relative z-10 text-gray-400 bg-blue-primary rounded-full px-[9px] py-[4px] text-[12px]">x</span>
+                                        <span class="text-blue-primary">20</span>
+                                    </div>
+                                    <span class="text-md text-blue-primary">Exchange rate</span>
+                                </div>
+                            </div>
+
 
                             <!-- Input Section for Recipient Gets -->
 
                             <div class="mb-6 relative ">
-                              <label for="recipient-amount" class="block text-sm font-medium text-black px-2">Recipient
+                                <label for="recipient-amount" class="block text-sm font-medium text-black px-2">Recipient
                                 Gets</label>
-                              <div class="flex items-center border rounded-[20px] mt-2 relative bg-gray-50">
-                                <input type="" id="recipient-amount" placeholder=" ₹ 2330.88"
-                                  class="w-full text-[22px] px-3 py-2 bg-gray-50 text-gray-800 focus:outline-none rounded-[20px]" />
-                                <button type="button" id="recipient-currency-button"
-                                  class="inline-flex items-center bg-[rgba(127,177,217,1)] px-4 py-4 rounded-r-[20px] focus:outline-none relative w-full max-w-max"
-                                  onclick="toggleDropdown('recipient-currency-dropdown')">
+                                <div class="flex items-center border rounded-[20px] mt-2 relative bg-gray-50">
+                                    <input type="" id="recipient-amount" placeholder=" ₹ 2330.88" class="w-full text-[22px] px-3 py-2 bg-gray-50 text-gray-800 focus:outline-none rounded-[20px]" />
+                                    <button type="button" id="recipient-currency-button" class="inline-flex items-center bg-[rgba(127,177,217,1)] px-4 py-4 rounded-r-[20px] focus:outline-none relative w-full max-w-max" onclick="toggleDropdown('recipient-currency-dropdown')">
                                   <img src="../images/money-flag/india.png" alt="NGN Flag" class="h-8 mr-2"
                                     id="recipient-flag" />
                                   <span id="recipient-currency" class="text-sm font-medium mr-2">INR</span>
@@ -224,7 +218,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </button>
-                              </div>
+                                </div>
 
 
                                 <!-- Recipient Currency Dropdown -->
@@ -233,10 +227,10 @@
                                         <input type="text" id="recipient-currency-search" placeholder="Search currency..." class="w-full px-3 py-2 border rounded-md focus:outline-none" oninput="filterDropdown('recipient-currency-dropdown', 'recipient-currency-search')" />
                                     </div>
                                     <ul class="divide-y divide-gray-200">
-                                      <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer" onclick="selectRecipientCurrency('../images/money-flag/australia.png', 'AUD')">
-                                        <img src="../images/money-flag/australia.png" alt="AUD Flag" class="h-8 mr-2" />
-                                        <span>AUD - Australian Dollar</span>
-                                    </li>
+                                        <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer" onclick="selectRecipientCurrency('../images/money-flag/australia.png', 'AUD')">
+                                            <img src="../images/money-flag/australia.png" alt="AUD Flag" class="h-8 mr-2" />
+                                            <span>AUD - Australian Dollar</span>
+                                        </li>
                                         <li class="p-2 flex items-center hover:bg-gray-100 cursor-pointer" onclick="selectRecipientCurrency('../images/money-flag/sri-lanka.png', 'LKR')">
                                             <img src="../images/money-flag/sri-lanka.png" alt="NGN Flag" class="h-8 mr-2" />
                                             <span>LKR - Sri Lankan Rupee</span>
@@ -309,12 +303,12 @@
                 <!-- Left Content -->
                 <div class="lg:w-1/3 mb-12 lg:mb-0">
                     <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight">
-                      Simple and <span class="text-[#0579D8]">Secure Money Transfers</span>
+                        Simple and <span class="text-[#0579D8]">Secure Money Transfers</span>
                         <span class="text-[#0579D8]">Safe</span>- Fast and Reliable
-                        
+
                     </h2>
                     <p class="mt-4 text-gray-500">
-                      Send money securely and efficiently with our easy-to-use platform. We prioritize your safety while ensuring a hassle-free experience.
+                        Send money securely and efficiently with our easy-to-use platform. We prioritize your safety while ensuring a hassle-free experience.
                     </p>
                 </div>
 
@@ -327,7 +321,7 @@
                         </div>
                         <h3 class="font-bold text-2xl text-gray-800">24/7 Services</h3>
                         <p class="text-gray-500 mt-2">
-                          Our platform operates round the clock, helps you to send money anytime, anywhere.
+                            Our platform operates round the clock, helps you to send money anytime, anywhere.
                         </p>
                     </div>
 
@@ -338,7 +332,7 @@
                         </div>
                         <h3 class="font-bold text-2xl text-gray-800">Instant Cashout</h3>
                         <p class="text-gray-500 mt-2">
-                          Enjoy smooth and efficient money transfers without unnecessary delays.
+                            Enjoy smooth and efficient money transfers without unnecessary delays.
                         </p>
                     </div>
 
@@ -349,7 +343,7 @@
                         </div>
                         <h3 class="font-bold text-2xl text-gray-800">Fully Encrypted</h3>
                         <p class="text-gray-500 mt-2">
-                          Your transactions are safeguarded with top-notch encryption technology.
+                            Your transactions are safeguarded with top-notch encryption technology.
                         </p>
                     </div>
 
@@ -360,7 +354,7 @@
                         </div>
                         <h3 class="font-bold text-2xl text-gray-800">Safe and Secure</h3>
                         <p class="text-gray-500 mt-2">
-                          We follow the highest security standards to keep your money and data protected.
+                            We follow the highest security standards to keep your money and data protected.
                         </p>
                     </div>
                 </div>
@@ -380,15 +374,15 @@
                         Send Money Anytime, <br /> Anywhere In a Minutes
                     </h2>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                      With our user-friendly platform, transferring money is now easier. Whether it’s day or night, you can send money securely in just a few taps.
+                        With our user-friendly platform, transferring money is now easier. Whether it’s day or night, you can send money securely in just a few taps.
                     </p>
                     <div class=" p-4 rounded-md text-gray-700">
-                      <ul class="list-disc space-y-2 pl-6 text-justify">
-                          <li>Quick and hassle-free process</li>
-                          <li>Transparent exchange rates</li>
-                          <li>Reliable global coverage</li>
-                      </ul>
-                  </div>
+                        <ul class="list-disc space-y-2 pl-6 text-justify">
+                            <li>Quick and hassle-free process</li>
+                            <li>Transparent exchange rates</li>
+                            <li>Reliable global coverage</li>
+                        </ul>
+                    </div>
                     <button class="bg-blue-primary text-white px-6 py-3 rounded-full hover:bg-blue-700 mt-5">
                       Send Money
               </button>
@@ -402,10 +396,10 @@
             <div class="container mx-auto text-center px-6 md:px-12">
                 <!-- Heading -->
                 <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
-                  Everything You Need In One Platform
+                    Everything You Need In One Platform
                 </h2>
                 <p class="text-gray-600 mb-12">
-                  Our platform brings together all essential features for effortless money transfers.
+                    Our platform brings together all essential features for effortless money transfers.
                 </p>
 
                 <!-- Features Cards -->
@@ -442,13 +436,13 @@
             <div class="container mx-auto text-center px-6 md:px-12">
                 <!-- Heading -->
                 <h2 class="text-2xl lg:text-3xl font-bold text-white mb-4">
-                  Manage Your Transactions And Recipients With Ease
+                    Manage Your Transactions And Recipients With Ease
                 </h2>
                 <p class="text-white ">
-                  Our intuitive dashboard allows you to view your complete transaction history and manage recipient details  effortlessly.
+                    Our intuitive dashboard allows you to view your complete transaction history and manage recipient details effortlessly.
                 </p>
                 <p class="text-white mb-12">
-                  Stay organized and informed with real-time updates and comprehensive records.
+                    Stay organized and informed with real-time updates and comprehensive records.
                 </p>
 
                 <!-- Image Section -->
@@ -467,7 +461,7 @@
             <div class="container mx-auto text-center px-6 md:px-12">
                 <!-- Heading -->
                 <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
-                  Send Money Online in 3 Easy Steps
+                    Send Money Online in 3 Easy Steps
                 </h2>
                 <!-- <p class="text-gray-600 mb-12">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspe ultrices gravida. Risus commodo viverra maecenas
@@ -508,13 +502,13 @@
                 <!-- Text Content -->
                 <div class="md:w-1/3 text-center md:text-left">
                     <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
-                      Seamless Transactions with Exchange Rates Transparency
+                        Seamless Transactions with Exchange Rates Transparency
                     </h2>
                     <p class="text-gray-600 mb-4">
-                      Experience smooth and secure transactions without complications.
+                        Experience smooth and secure transactions without complications.
                     </p>
                     <p class="text-gray-600 mb-6">
-                      Check Exchange Rates Stay updated with real-time exchange rates for maximum transparency.
+                        Check Exchange Rates Stay updated with real-time exchange rates for maximum transparency.
                     </p>
                     <button class="bg-blue-primary text-white px-6 py-3 rounded-full hover:bg-blue-700">
             Check Rates
@@ -528,61 +522,61 @@
         </section>
 
         <section class="py-16 bg-white">
-          <div class="container mx-auto px-6 md:px-12">
-              <!-- Header -->
-              <div class="text-center">
-                  <h2 class="text-2xl lg:text-3xl font-semibold text-gray-800">Payout Destinations</h2>
-                  <!-- <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+            <div class="container mx-auto px-6 md:px-12">
+                <!-- Header -->
+                <div class="text-center">
+                    <h2 class="text-2xl lg:text-3xl font-semibold text-gray-800">Payout Destinations</h2>
+                    <!-- <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspen ultices gravida. Risus commodo viverra maecenas.
                   </p> -->
-              </div>
-
-              <!-- Flags Section -->
-              <div class="flex flex-wrap justify-center mt-10">
-                  <!-- Flag Card -->
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/australia.png" alt="Australia" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">Australia</p>
-                  </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/bangladesh.png" alt="Bangladesh" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">Bangladesh</p>
-                  </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/india.png" alt="India" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">India</p>
-                  </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/fiji.png" alt="Fiji" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">Fiji</p>
-                  </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/malaysia.png" alt="Malaysia" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">Malaysia</p>
-                  </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                    <img src="../images/money-flag/nepal.png" alt="Nepal" class="w-16 h-16 rounded-full shadow-md">
-                    <p class="text-sm text-gray-700 mt-2">Nepal</p>
                 </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/pakistan.png" alt="Pakistan" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">Pakistan</p>
-                  </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/phillipine.png" alt="philippines" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">Philippines</p>
-                  </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/sri-lanka.png" alt="Sri Lanka" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">Sri Lanka</p>
-                  </div>
-                  <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
-                      <img src="../images/money-flag/viatnam.png" alt="vietnam" class="w-16 h-16 rounded-full shadow-md">
-                      <p class="text-sm text-gray-700 mt-2">Vietnam</p>
-                  </div>
-              </div>
-          </div>
-      </section>
+
+                <!-- Flags Section -->
+                <div class="flex flex-wrap justify-center mt-10">
+                    <!-- Flag Card -->
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/australia.png" alt="Australia" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Australia</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/bangladesh.png" alt="Bangladesh" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Bangladesh</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/india.png" alt="India" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">India</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/fiji.png" alt="Fiji" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Fiji</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/malaysia.png" alt="Malaysia" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Malaysia</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/nepal.png" alt="Nepal" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Nepal</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/pakistan.png" alt="Pakistan" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Pakistan</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/phillipine.png" alt="philippines" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Philippines</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/sri-lanka.png" alt="Sri Lanka" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Sri Lanka</p>
+                    </div>
+                    <div class="w-1/2 md:w-1/4 p-4 flex flex-col items-center">
+                        <img src="../images/money-flag/viatnam.png" alt="vietnam" class="w-16 h-16 rounded-full shadow-md">
+                        <p class="text-sm text-gray-700 mt-2">Vietnam</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="py-16">
             <div class="container mx-auto px-6 md:px-12 text-center">
@@ -622,7 +616,7 @@
               </svg>
             </button>
                         <p id="faq1" class="hidden mt-2 text-sm text-gray-700 text-left">
-                          The transfer limit varies depending on your account verification level.
+                            The transfer limit varies depending on your account verification level.
                         </p>
                     </div>
                     <div class="bg-blue-200 p-4 rounded mb-4">
@@ -634,22 +628,22 @@
               </svg>
             </button>
                         <p id="faq5" class="hidden mt-2 text-sm text-gray-700 text-left">
-                          Most transfers are completed swiftly, while others may take up to 24 hours.
+                            Most transfers are completed swiftly, while others may take up to 24 hours.
                         </p>
                     </div>
 
                     <div class="bg-blue-200 p-4 rounded mb-4">
-                      <button onclick="toggleFAQ('faq9')" class="flex justify-between items-center w-full text-left">
+                        <button onclick="toggleFAQ('faq9')" class="flex justify-between items-center w-full text-left">
             <span>Is my personal information secure?</span>
             <svg class="w-4 h-4 transform transition-transform" data-arrow="faq9" xmlns="http://www.w3.org/2000/svg"
               fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-                      <p id="faq9" class="hidden mt-2 text-sm text-gray-700 text-left">
-                        Yes, we use advanced encryption protocols to ensure your data is protected.
-                      </p>
-                  </div>
+                        <p id="faq9" class="hidden mt-2 text-sm text-gray-700 text-left">
+                            Yes, we use advanced encryption protocols to ensure your data is protected.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="faq-category" data-category="money">
@@ -662,7 +656,7 @@
               </svg>
             </button>
                         <p id="faq2" class="hidden mt-2 text-sm text-gray-700 text-left">
-                          You can track your transfer in real-time through our app or website after logging in.
+                            You can track your transfer in real-time through our app or website after logging in.
                         </p>
                     </div>
                     <div class="bg-blue-200 p-4 rounded mb-4">
@@ -674,12 +668,12 @@
               </svg>
             </button>
                         <p id="faq6" class="hidden mt-2 text-sm text-gray-700 text-left">
-                          Transfers cannot be canceled once processed, but contact support for assistance.
+                            Transfers cannot be canceled once processed, but contact support for assistance.
                         </p>
                     </div>
 
                     <div class="bg-blue-200 p-4 rounded mb-4">
-                      <button onclick="toggleFAQ('faq10')" class="flex justify-between items-center w-full text-left">
+                        <button onclick="toggleFAQ('faq10')" class="flex justify-between items-center w-full text-left">
             <span>What currencies are supported?
             </span>
             <svg class="w-4 h-4 transform transition-transform" data-arrow="faq10" xmlns="http://www.w3.org/2000/svg"
@@ -687,10 +681,10 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-                      <p id="faq10" class="hidden mt-2 text-sm text-gray-700 text-left">
-                        We support a wide range of international currencies.
-                      </p>
-                  </div>
+                        <p id="faq10" class="hidden mt-2 text-sm text-gray-700 text-left">
+                            We support a wide range of international currencies.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="faq-category hidden" data-category="cards">
@@ -703,7 +697,7 @@
               </svg>
             </button>
                         <p id="faq3" class="hidden mt-2 text-sm text-gray-700 text-left">
-                          We accept debit cards, credit cards, and bank transfers.
+                            We accept debit cards, credit cards, and bank transfers.
                         </p>
                     </div>
                     <div class="bg-blue-200 p-4 rounded mb-4">
@@ -715,24 +709,24 @@
               </svg>
             </button>
                         <p id="faq7" class="hidden mt-2 text-sm text-gray-700 text-left">
-                          Yes, you can securely save your card details in your profile.
+                            Yes, you can securely save your card details in your profile.
 
                         </p>
                     </div>
 
                     <div class="bg-blue-200 p-4 rounded mb-4">
-                      <button onclick="toggleFAQ('faq11')" class="flex justify-between items-center w-full text-left">
+                        <button onclick="toggleFAQ('faq11')" class="flex justify-between items-center w-full text-left">
             <span>Are there any restrictions on card payments</span>
             <svg class="w-4 h-4 transform transition-transform" data-arrow="faq11" xmlns="http://www.w3.org/2000/svg"
               fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-                      <p id="faq11" class="hidden mt-2 text-sm text-gray-700 text-left">
-                        Some regional restrictions may apply based on your bank.
+                        <p id="faq11" class="hidden mt-2 text-sm text-gray-700 text-left">
+                            Some regional restrictions may apply based on your bank.
 
-                      </p>
-                  </div>
+                        </p>
+                    </div>
                 </div>
 
                 <div class="faq-category hidden" data-category="fees">
@@ -745,7 +739,7 @@
               </svg>
             </button>
                         <p id="faq4" class="hidden mt-2 text-sm text-gray-700 text-left">
-                          No, all fees are transparently displayed before confirming the transfer.
+                            No, all fees are transparently displayed before confirming the transfer.
 
                         </p>
                     </div>
@@ -758,12 +752,12 @@
               </svg>
             </button>
                         <p id="faq8" class="hidden mt-2 text-sm text-gray-700 text-left">
-                          Exchange rates are updated in real-time based on market conditions.
+                            Exchange rates are updated in real-time based on market conditions.
                         </p>
                     </div>
 
                     <div class="bg-blue-200 p-4 rounded mb-4">
-                      <button onclick="toggleFAQ('faq12')" class="flex justify-between items-center w-full text-left">
+                        <button onclick="toggleFAQ('faq12')" class="flex justify-between items-center w-full text-left">
             <span>Do different payment methods have different charges?
             </span>
             <svg class="w-4 h-4 transform transition-transform" data-arrow="faq12" xmlns="http://www.w3.org/2000/svg"
@@ -771,10 +765,10 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-                      <p id="faq12" class="hidden mt-2 text-sm text-gray-700 text-left">
-                        Yes, charges may vary depending on your chosen payment method.
-                      </p>
-                  </div>
+                        <p id="faq12" class="hidden mt-2 text-sm text-gray-700 text-left">
+                            Yes, charges may vary depending on your chosen payment method.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -784,9 +778,9 @@
             <div class="container mx-auto flex flex-col md:flex-row flex-wrap gap-8 px-6 md:px-12">
                 <!-- Column 1 -->
                 <div class="flex-1">
-                  <img src="../images/footer-logo.png" alt="VeloxPays Logo" class="w-40 mt-4">
-        
-                 </div>
+                    <img src="../images/footer-logo.png" alt="VeloxPays Logo" class="w-40 mt-4">
+
+                </div>
 
                 <div class="flex-1">
                     <h3 class="font-semibold text-lg">Company</h3>
@@ -820,35 +814,35 @@
                 <div class="flex-1">
                     <h3 class="font-semibold text-lg">Connect</h3>
                     <ul class="mt-4 flex items-center  space-x-2">
-                      <li>
-                          <a href="#" class="hover:opacity-80">
-                              <img src="../images/links/fb.png" alt="facebook" class="w-7 h-7">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:opacity-80">
-                              <img src="../images/links/insta.png" alt="Instagram" class="w-7 h-7">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:opacity-80">
-                              <img src="../images/links/twitter.png" alt="Twitter" class="w-7 h-7">
-                          </a>
-                      </li>
-                      <li>
-                        <a href="#" class="hover:opacity-80">
-                            <img src="../images/links/linkdin.png" alt="Linkdin" class="w-7 h-7">
-                        </a>
-                    </li>
-                  </ul>
-                  
-                  
+                        <li>
+                            <a href="#" class="hover:opacity-80">
+                                <img src="../images/links/fb.png" alt="facebook" class="w-7 h-7">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:opacity-80">
+                                <img src="../images/links/insta.png" alt="Instagram" class="w-7 h-7">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:opacity-80">
+                                <img src="../images/links/twitter.png" alt="Twitter" class="w-7 h-7">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:opacity-80">
+                                <img src="../images/links/linkdin.png" alt="Linkdin" class="w-7 h-7">
+                            </a>
+                        </li>
+                    </ul>
+
+
                 </div>
             </div>
         </footer>
         <div class="text-center bg-[#001546] py-2">
-          <p class="text-sm text-white">VeloxPays All rights reserved &copy;2024</p>
-      </div>
+            <p class="text-sm text-white">VeloxPays All rights reserved &copy;2024</p>
+        </div>
 
 
 

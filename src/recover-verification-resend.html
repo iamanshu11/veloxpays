@@ -2,73 +2,71 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veloxpays</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloxpays</title>
 
-  <link href="../dist/output.css" rel="stylesheet">
-  <link href="../src/custom.css" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="../src/custom.css" rel="stylesheet">
 </head>
 
 <body>
-  <main>
-    <div class="flex items-center justify-center min-h-screen bg-gray-50">
-      <div class="relative flex flex-col md:flex-row w-full h-screen bg-white">
-        <!-- Left Section with Full Size Image -->
-        <div class=" w-full md:w-1/2 h-auto md:h-full">
-          <!-- Top Image in Mobile View -->
-          <img src="../images/recover-bg.png" alt="Full Size Image" class="w-full h-90 md:h-full object-cover hidden md:block">
-          <!-- Logo and Cross in Mobile View -->
-          <div class="absolute top-4 left-4 md:hidden flex items-center justify-between w-full px-4">
-            <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
-            <a href="index.html" class="text-gray-600 text-2xl hover:text-gray-800 pr-5">&times;</a>
-          </div>
-          <!-- Logo at Top Left (Desktop) -->
-          <div class="absolute top-4 left-4 hidden md:block">
-            <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
-    
-          </div>
-          <!-- Cross Mark at Form Right Corner (Desktop) -->
-          <div class="hidden md:block  absolute top-4 right-4">
-            <a href="index.html" class="text-gray-600 text-2xl hover:text-gray-800 ">&times;</a>
-          </div>
-        </div>
-    
-        <!-- Form Section -->
-        <div class="flex-1 flex items-center justify-center p-4 md:p-8">
-          <div class="w-full max-w-xl">
-            <!-- Form Header -->
-            <h2 class="text-2xl font-bold text-blue-500 mb-2 text-center">Resend <span class="text-black"> Link</span></h2>
-            <p class="text-sm text-gray-500 mb-6 text-center">Verify your email for next step</p>
-    
-            <!-- Form -->
-            <form action="#" method="POST" class="space-y-8">
-              <p class="text-gray-700 mt-4 text-center">
-                We have resend the confirmation link to your given mail account
-                <span class="font-medium text-green-600">dxxxxxxxxxgmail.com</span>.
-                Please confirm the verification process to continue further.
-              </p>
+    <main>
+        <div class="flex items-center justify-center min-h-screen bg-gray-50">
+            <div class="relative flex flex-col md:flex-row w-full h-screen bg-white">
+                <!-- Left Section with Full Size Image -->
+                <div class="  w-[60%] md:w-[60%] h-auto md:h-full">
+                    <!-- Top Image in Mobile View -->
+                    <img src="../images/recover-bg.png" alt="Full Size Image" class="w-full h-90 md:h-full object-cover hidden md:block">
+                    <!-- Logo and Cross in Mobile View -->
+                    <div class="absolute top-4 left-4 md:hidden flex items-center justify-between w-full px-4">
+                        <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
+                        <a href="index.html" class="text-gray-600 text-2xl hover:text-gray-800 pr-10"><img src="../images/cross.png"></a>
+                    </div>
+                    <!-- Logo at Top Left (Desktop) -->
+                    <div class="absolute top-4 left-4 hidden md:block">
+                        <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
 
-              <!-- Action Links -->
-              <div class="flex justify-between mt-4 space-x-4">
-                <a href="recover-verification-resend.html" class="text-blue-500 font-medium hover:underline">Resend link</a>
-                <a href="recover-verification-edit-email.html" class="text-blue-500 font-medium hover:underline">Edit email</a>
-              </div>
-    
-              <!-- Submit Button -->
-              <a href="recover-save-pasword.html"
-                class="block w-full bg-blue-primary text-white text-center py-3 rounded-md font-medium hover:bg-blue-900 transition">
+                    </div>
+                    <!-- Cross Mark at Form Right Corner (Desktop) -->
+                    <div class="hidden md:block  absolute top-4 right-4">
+                        <a href="index.html" class="text-gray-600 text-2xl hover:text-gray-800 pr-20"><img src="../images/cross.png"></a>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <div class="flex-1 flex items-center justify-center p-4 md:p-8">
+                    <div class="w-full max-w-xl">
+                        <!-- Form Header -->
+                        <h2 class="text-3xl font-bold text-[#0579D8] mb-2 text-center">Resend <span class="text-black"> Link</span></h2>
+                        <p class="text-md text-gray-500 mb-6 text-center">Verify your email for next step</p>
+
+                        <!-- Form -->
+                        <form action="#" method="POST" class="space-y-8">
+                            <p class="text-gray-700 mt-4 text-center text-md">
+                                We have resend the confirmation link to your given mail account
+                                <span class="font-medium text-green-600">dxxxxxxxxxgmail.com</span>. Please confirm the verification process to continue further.
+                            </p>
+
+                            <!-- Action Links -->
+                            <div class="flex justify-between mt-4 space-x-4">
+                                <a href="recover-verification-resend.html" class="text-[#0579D8] font-medium hover:underline">Resend link</a>
+                                <a href="recover-verification-edit-email.html" class="text-[#0579D8] font-medium hover:underline">Edit email</a>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <a href="recover-save-pasword.html" class="block w-full bg-blue-primary text-white text-center py-3 rounded-md font-medium hover:bg-blue-900 transition">
                 Continue
               </a>
-            </form>
-          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-  </main>
+    </main>
 
-  <script src="../src/js/script.js"></script>
+    <script src="../src/js/script.js"></script>
 </body>
 
 </html>
