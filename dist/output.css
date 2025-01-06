@@ -1872,6 +1872,10 @@ html,
     flex-direction: row;
   }
 
+  .md\:flex-col{
+    flex-direction: column;
+  }
+
   .md\:p-6{
     padding: 1.5rem;
   }
