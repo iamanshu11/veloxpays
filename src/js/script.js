@@ -46,19 +46,28 @@ burgerMenu.addEventListener('click', () => {
   burgerIcon.classList.toggle('hidden');
   closeIcon.classList.toggle('hidden');
 });
-function toggleDropdown(id) {
-  const dropdown = document.getElementById(id);
-  const dropdownIcon = dropdown.previousElementSibling.querySelector('svg');
 
-  // Toggle dropdown visibility
+
+function toggleDropdown(dropdownId) {
+  const dropdown = document.getElementById(dropdownId);
+  const dropdownIcon = document.getElementById('dropdown-icon');
+
+  // Toggle the dropdown visibility
   dropdown.classList.toggle('hidden');
 
-  // Adjust the icon's rotation
-  if (!dropdown.classList.contains('hidden')) {
-    dropdownIcon.classList.add('rotate-180');
-  } else {
-    dropdownIcon.classList.remove('rotate-180');
-  }
+  // Rotate the dropdown icon
+  dropdownIcon.classList.toggle('rotate-180');
+}
+
+function toggleDropdown(dropdownId) {
+  const dropdown = document.getElementById(dropdownId);
+  const dropdownIcon = document.getElementById('recipient-dropdown-icon');
+
+  // Toggle the dropdown visibility
+  dropdown.classList.toggle('hidden');
+
+  // Rotate the dropdown icon
+  dropdownIcon.classList.toggle('rotate-180');
 }
 
 function selectCurrency(flagUrl, currencyCode) {

@@ -110,14 +110,16 @@
 
                             <div class=" relative mt-2">
                                 <label for="amount" class="block text-sm font-medium text-black px-2">You Send</label>
-                                <div class="flex items-center  border rounded-[20px] mt-2 relative bg-gray-50">
+                                <div class="flex items-center border rounded-[20px] mt-2 relative bg-gray-50">
+                                    <!-- Input Field -->
                                     <input type="text" id="amount" placeholder=" $ 2500"
-                                        class="w-full text-[22px] bg-gray-50 px-3 py-3 text-gray-800 focus:outline-none rounded-[20px] " />
+                                        class="w-full text-[22px] bg-gray-50 px-3 py-3 text-gray-800 focus:outline-none rounded-[20px]" />
+                                
+                                    <!-- Button with Dropdown Toggle -->
                                     <button type="button" id="currency-button"
-                                        class="inline-flex items-center bg-[rgba(127,177,217,1)] px-4 py-4 rounded-r-[20px]  focus:outline-none relative w-full max-w-max"
+                                        class="inline-flex items-center bg-[rgba(127,177,217,1)] px-4 py-4 rounded-r-[20px] focus:outline-none relative w-full max-w-max"
                                         onclick="toggleDropdown('currency-dropdown')">
-                                        <img src="../images/money-flag/australia.png" alt="GBP Flag" class="h-8 mr-2"
-                                            id="selected-flag" />
+                                        <img src="../images/money-flag/australia.png" alt="GBP Flag" class="h-8 mr-2" id="selected-flag" />
                                         <span id="selected-currency" class="text-sm font-medium mr-2">AUD</span>
                                         <svg id="dropdown-icon"
                                             class="w-5 h-5 text-gray-700 ml-2 transition-transform transform"
@@ -244,22 +246,24 @@
                                 <label for="recipient-amount"
                                     class="block text-sm font-medium text-black px-2">Recipient
                                     Gets</label>
-                                <div class="flex items-center border rounded-[20px] mt-2 relative bg-gray-50">
-                                    <input type="" id="recipient-amount" placeholder=" ₹ 2330.88"
-                                        class="w-full text-[22px] px-3 py-2 bg-gray-50 text-gray-800 focus:outline-none rounded-[20px]" />
-                                    <button type="button" id="recipient-currency-button"
-                                        class="inline-flex items-center bg-[rgba(127,177,217,1)] px-4 py-4 rounded-r-[20px] focus:outline-none relative w-full max-w-max"
-                                        onclick="toggleDropdown('recipient-currency-dropdown')">
-                                        <img src="../images/money-flag/india.png" alt="NGN Flag" class="h-8 mr-2"
-                                            id="recipient-flag" />
-                                        <span id="recipient-currency" class="text-sm font-medium mr-2">INR</span>
-                                        <svg class="w-5 h-5 text-gray-700 ml-2" id="dropdown-icon" fill="currentColor"
-                                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </button>
-                                </div>
+                                    <div class="flex items-center border rounded-[20px] mt-2 relative bg-gray-50">
+                                        <!-- Input Field -->
+                                        <input type="text" id="recipient-amount" placeholder="₹ 2330.88"
+                                            class="w-full text-[22px] px-3 py-2 bg-gray-50 text-gray-800 focus:outline-none rounded-[20px]" />
+                                    
+                                        <!-- Button with Dropdown Toggle -->
+                                        <button type="button" id="recipient-currency-button"
+                                            class="inline-flex items-center bg-[rgba(127,177,217,1)] px-4 py-4 rounded-r-[20px] focus:outline-none relative w-full max-w-max"
+                                            onclick="toggleDropdown('recipient-currency-dropdown')">
+                                            <img src="../images/money-flag/india.png" alt="NGN Flag" class="h-8 mr-2" id="recipient-flag" />
+                                            <span id="recipient-currency" class="text-sm font-medium mr-2">INR</span>
+                                            <svg class="w-5 h-5 text-gray-700 ml-2 transition-transform transform" id="recipient-dropdown-icon"
+                                                fill="currentColor" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                    </div>
 
 
                                 <!-- Recipient Currency Dropdown -->
@@ -960,6 +964,10 @@
 
 
     <script src="../src/js/script.js"></script>
+    <script>
+        
+
+    </script>
 </body>
 
 </html>
