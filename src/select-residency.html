@@ -12,7 +12,7 @@
 
 <body>
     <main>
-    
+
         <div class="flex items-center justify-center min-h-screen bg-gray-50">
             <div class="relative flex flex-col md:flex-row w-full h-screen bg-white">
                 <!-- Left Section with Full Size Image -->
@@ -29,7 +29,7 @@
                     <!-- Logo at Top Left (Desktop) -->
                     <div class="absolute top-4 left-4 hidden md:block">
                         <a href="index.html"><img src="../images/logo.png" alt="VeloxPays Logo" class="w-20"></a>
-    
+
                     </div>
                     <!-- Cross Mark at Form Right Corner (Desktop) -->
                     <div class="hidden md:block  absolute top-4 right-4">
@@ -37,7 +37,7 @@
                                 src="../images/cross.png"></a>
                     </div>
                 </div>
-    
+
                 <!-- Form Section -->
                 <div class="flex-1 flex items-center justify-center p-4 md:p-8">
                     <div class="w-full max-w-xl">
@@ -45,74 +45,77 @@
                         <h2 class="text-3xl font-bold text-blue-500 mb-2 text-center">Select <span
                                 class="text-black">Residency
                             </span></h2>
-                        <p class="text-md text-gray-500 mb-6 text-center">Select your residential country </p>
-    
+                        <p class="text-md text-gray-500 mb-16 text-center">Select your residential country </p>
+
                         <!-- Form -->
                         <form action="#" method="POST" class="space-y-8">
-    
+
                             <!-- Search Input Field -->
-                            <div class="w-full mt-4">
-                                <div class="flex items-center border border-gray-300 rounded-lg p-3 bg-white">
-                                    <img class="residency-search-flag hidden w-10 h-10 mr-4" src="" alt="Selected Flag">
-                                    <input type="text"
-                                        class="residency-search-input w-full bg-transparent focus:outline-none"
-                                        placeholder="Select Your Country">
+                            <div class="w-full">
+                                <div class="relative">
+                                    <input type="text" id="nationality-drop-input" name="nationality" placeholder=" "
+                                        class="peer w-full px-4 py-2 border-b border-gray-300 focus:outline-none "
+                                        oninput="filterNationalities()" autocomplete="off" />
+                                    <label for="nationality-drop-input"
+                                        class="absolute left-4 -top-3 text-gray-600 text-sm transition-all duration-200 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#28A70E]">
+                                        Select Your Country
+                                    </label>
+                                    <img id="nationality-flag" src="../images/money-flag/bangladesh.png" alt="Flag"
+                                        class="absolute right-3 top-1/2 transform -translate-y-1/2 w-10 h-10 hidden" />
+                                    <ul id="nationality-drop-list"
+                                        class="absolute z-10 w-full bg-gray-100 border rounded-md mt-1 max-h-40 overflow-y-auto hidden">
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('Bangladesh', '../images/money-flag/bangladesh.png')">
+                                            <img src="../images/money-flag/bangladesh.png" alt="Bangladesh"
+                                                class="w-10 h-10 mr-2" /> Bangladesh
+                                        </li>
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('India', '../images/money-flag/india.png')">
+                                            <img src="../images/money-flag/india.png" alt="India"
+                                                class="w-10 h-10 mr-2" /> India
+                                        </li>
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('Pakistan', '../images/money-flag/pakistan.png')">
+                                            <img src="../images/money-flag/pakistan.png" alt="Pakistan"
+                                                class="w-10 h-10 mr-2" /> Pakistan
+                                        </li>
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('Nepal', '../images/money-flag/nepal.png')">
+                                            <img src="../images/money-flag/nepal.png" alt="Nepal"
+                                                class="w-10 h-10 mr-2" /> Nepal
+                                        </li>
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('Sri Lanka', '../images/money-flag/sri-lanka.png')">
+                                            <img src="../images/money-flag/sri-lanka.png" alt="Sri Lanka"
+                                                class="w-10 h-10 mr-2" /> Sri Lanka
+                                        </li>
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('Malaysia', '../images/money-flag/malaysia.png')">
+                                            <img src="../images/money-flag/malaysia.png" alt="Malaysia"
+                                                class="w-10 h-10 mr-2" /> Malaysia
+                                        </li>
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('Philippines', '../images/money-flag/phillipine.png')">
+                                            <img src="../images/money-flag/phillipine.png" alt="Philippines"
+                                                class="w-10 h-10 mr-2" /> Philippines
+                                        </li>
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('Vietnam', '../images/money-flag/viatnam.png')">
+                                            <img src="../images/money-flag/viatnam.png" alt="Vietnam"
+                                                class="w-10 h-10 mr-2" /> Vietnam
+                                        </li>
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                            onclick="selectNationality('Fiji', '../images/money-flag/fiji.png')">
+                                            <img src="../images/money-flag/fiji.png" alt="Fiji"
+                                                class="w-10 h-10 mr-2" /> Fiji
+                                        </li>
+                                    </ul>
                                 </div>
+
                             </div>
-    
-                            <!-- Country Dropdown -->
-                            <div
-                                class="residency-country-list w-full mt-4 bg-white border border-gray-300 rounded-lg max-h-48 overflow-y-auto">
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="Bangladesh" data-flag="../images/money-flag/bangladesh.png">
-                                    <img src="../images/money-flag/bangladesh.png" alt="Bangladesh" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">Bangladesh</span>
-                                </div>
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="India" data-flag="../images/money-flag/india.png">
-                                    <img src="../images/money-flag/india.png" alt="India" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">India</span>
-                                </div>
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="Pakistan" data-flag="../images/money-flag/pakistan.png">
-                                    <img src="../images/money-flag/pakistan.png" alt="Pakistan" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">Pakistan</span>
-                                </div>
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="Nepal" data-flag="../images/money-flag/nepal.png">
-                                    <img src="../images/money-flag/nepal.png" alt="Nepal" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">Nepal</span>
-                                </div>
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="Sri Lanka" data-flag="../images/money-flag/sri-lanka.png">
-                                    <img src="../images/money-flag/sri-lanka.png" alt="Sri Lanka" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">Sri Lanka</span>
-                                </div>
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="Malaysia" data-flag="../images/money-flag/malaysia.png">
-                                    <img src="../images/money-flag/malaysia.png" alt="Malaysia" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">Malaysia</span>
-                                </div>
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="Philippines" data-flag="../images/money-flag/phillipine.png">
-                                    <img src="../images/money-flag/phillipine.png" alt="Philippines" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">Philippines</span>
-                                </div>
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="Viatnam" data-flag="../images/money-flag/viatnam.png">
-                                    <img src="../images/money-flag/viatnam.png" alt="Viatnam" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">Viatnam</span>
-                                </div>
-                                <div class="residency-country-option flex items-center p-4 hover:bg-gray-200 cursor-pointer"
-                                    data-name="Fiji" data-flag="../images/money-flag/fiji.png">
-                                    <img src="../images/money-flag/fiji.png" alt="Fiji" class="w-10 h-10 mr-4">
-                                    <span class="text-gray-800 font-medium">Fiji</span>
-                                </div>
-                            </div>
-    
-    
-    
-    
+
+
+
                             <!-- Submit Button -->
                             <a href="personal-details.html"
                                 class="block w-full bg-blue-primary text-white text-center py-3 rounded-md font-medium hover:bg-blue-900 transition">
@@ -123,46 +126,12 @@
                 </div>
             </div>
         </div>
-    
+
     </main>
 
 
 
     <script src="../src/js/script.js"></script>
-    <script>
-        const searchInput = document.querySelector(".residency-search-input");
-const searchFlag = document.querySelector(".residency-search-flag");
-const countryOptions = document.querySelectorAll(".residency-country-option");
-
-// Function to show or hide options based on search input
-function filterOptions() {
-    const searchText = searchInput.value.toLowerCase();
-    countryOptions.forEach(option => {
-        const name = option.getAttribute("data-name").toLowerCase();
-        if (name.includes(searchText)) {
-            option.style.display = "flex"; // show the option
-        } else {
-            option.style.display = "none"; // hide the option
-        }
-    });
-}
-
-// Event listener for country selection
-countryOptions.forEach(option => {
-    option.addEventListener("click", () => {
-        const flag = option.getAttribute("data-flag");
-        const name = option.getAttribute("data-name");
-
-        searchInput.value = name;
-        searchFlag.src = flag;
-        searchFlag.classList.remove("hidden");
-    });
-});
-
-// Event listener for filtering countries as user types
-searchInput.addEventListener("input", filterOptions);
-
-    </script>
 </body>
 
 </html>
