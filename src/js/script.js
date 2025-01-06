@@ -1,34 +1,3 @@
-const searchInput = document.querySelector(".residency-search-input");
-const searchFlag = document.querySelector(".residency-search-flag");
-const countryOptions = document.querySelectorAll(".residency-country-option");
-
-// Function to show or hide options based on search input
-function filterOptions() {
-    const searchText = searchInput.value.toLowerCase();
-    countryOptions.forEach(option => {
-        const name = option.getAttribute("data-name").toLowerCase();
-        if (name.includes(searchText)) {
-            option.style.display = "flex"; // show the option
-        } else {
-            option.style.display = "none"; // hide the option
-        }
-    });
-}
-
-// Event listener for country selection
-countryOptions.forEach(option => {
-    option.addEventListener("click", () => {
-        const flag = option.getAttribute("data-flag");
-        const name = option.getAttribute("data-name");
-
-        searchInput.value = name;
-        searchFlag.src = flag;
-        searchFlag.classList.remove("hidden");
-    });
-});
-
-// Event listener for filtering countries as user types
-searchInput.addEventListener("input", filterOptions);
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -254,5 +223,7 @@ document.addEventListener('click', (event) => {
     countryCodeList.classList.add('hidden');
   }
 });
+
+
 
 
