@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const nationalityInput = document.getElementById('nationality-drop-input');
   const nationalityList = document.getElementById('nationality-drop-list');

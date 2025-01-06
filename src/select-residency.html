@@ -53,66 +53,66 @@
                             <!-- Search Input Field -->
                             <div class="w-full">
                                 <div class="relative">
-                                    <input type="text" id="nationality-drop-input" name="nationality" placeholder=" "
-                                        class="peer w-full px-4 py-2 border-b border-gray-300 focus:outline-none "
-                                        oninput="filterNationalities()" autocomplete="off" />
-                                    <label for="nationality-drop-input"
-                                        class="absolute left-4 -top-3 text-gray-600 text-sm transition-all duration-200 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#28A70E]">
-                                        Select Your Country
-                                    </label>
-                                    <img id="nationality-flag" src="../images/money-flag/bangladesh.png" alt="Flag"
-                                        class="absolute right-3 top-1/2 transform -translate-y-1/2 w-10 h-10 hidden" />
+                                    <!-- Input Field with Flag -->
+                                    <div class="flex items-center border-b border-gray-300 px-3 py-2 bg-white ">
+                                        <img id="nationality-flag" src="" alt="Flag" class="w-10 h-10 mr-2 hidden rounded-full" />
+                                        <input type="text" id="nationality-drop-input" name="nationality" placeholder="Select Your Country"
+                                            class="w-full focus:outline-none bg-transparent text-gray-700" autocomplete="off" />
+                                    </div>
+                            
+                                    <!-- Dropdown List -->
                                     <ul id="nationality-drop-list"
-                                        class="absolute z-10 w-full bg-gray-100 border rounded-md mt-1 max-h-40 overflow-y-auto hidden">
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        class="absolute z-10 w-full bg-gray-100 border border-gray-300 rounded-md  mt-1 max-h-40 overflow-y-auto hidden">
+                                        <!-- List of Countries -->
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('Bangladesh', '../images/money-flag/bangladesh.png')">
-                                            <img src="../images/money-flag/bangladesh.png" alt="Bangladesh"
-                                                class="w-10 h-10 mr-2" /> Bangladesh
+                                            <img src="../images/money-flag/bangladesh.png" alt="Bangladesh" class="w-10 h-10 mr-2 rounded-full" />
+                                            Bangladesh
                                         </li>
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('India', '../images/money-flag/india.png')">
-                                            <img src="../images/money-flag/india.png" alt="India"
-                                                class="w-10 h-10 mr-2" /> India
+                                            <img src="../images/money-flag/india.png" alt="India" class="w-10 h-10 mr-2 rounded-full" />
+                                            India
                                         </li>
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('Pakistan', '../images/money-flag/pakistan.png')">
-                                            <img src="../images/money-flag/pakistan.png" alt="Pakistan"
-                                                class="w-10 h-10 mr-2" /> Pakistan
+                                            <img src="../images/money-flag/pakistan.png" alt="Pakistan" class="w-10 h-10 mr-2 rounded-full" />
+                                            Pakistan
                                         </li>
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('Nepal', '../images/money-flag/nepal.png')">
-                                            <img src="../images/money-flag/nepal.png" alt="Nepal"
-                                                class="w-10 h-10 mr-2" /> Nepal
+                                            <img src="../images/money-flag/nepal.png" alt="Nepal" class="w-10 h-10 mr-2 rounded-full" />
+                                            Nepal
                                         </li>
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('Sri Lanka', '../images/money-flag/sri-lanka.png')">
-                                            <img src="../images/money-flag/sri-lanka.png" alt="Sri Lanka"
-                                                class="w-10 h-10 mr-2" /> Sri Lanka
+                                            <img src="../images/money-flag/sri-lanka.png" alt="Sri Lanka" class="w-10 h-10 mr-2 rounded-full" />
+                                            Sri Lanka
                                         </li>
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('Malaysia', '../images/money-flag/malaysia.png')">
-                                            <img src="../images/money-flag/malaysia.png" alt="Malaysia"
-                                                class="w-10 h-10 mr-2" /> Malaysia
+                                            <img src="../images/money-flag/malaysia.png" alt="Malaysia" class="w-10 h-10 mr-2 rounded-full" />
+                                            Malaysia
                                         </li>
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('Philippines', '../images/money-flag/phillipine.png')">
-                                            <img src="../images/money-flag/phillipine.png" alt="Philippines"
-                                                class="w-10 h-10 mr-2" /> Philippines
+                                            <img src="../images/money-flag/phillipine.png" alt="Philippines" class="w-10 h-10 mr-2 rounded-full" />
+                                            Philippines
                                         </li>
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('Vietnam', '../images/money-flag/viatnam.png')">
-                                            <img src="../images/money-flag/viatnam.png" alt="Vietnam"
-                                                class="w-10 h-10 mr-2" /> Vietnam
+                                            <img src="../images/money-flag/viatnam.png" alt="Vietnam" class="w-10 h-10 mr-2 rounded-full" />
+                                            Vietnam
                                         </li>
-                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex items-center"
+                                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 flex items-center"
                                             onclick="selectNationality('Fiji', '../images/money-flag/fiji.png')">
-                                            <img src="../images/money-flag/fiji.png" alt="Fiji"
-                                                class="w-10 h-10 mr-2" /> Fiji
+                                            <img src="../images/money-flag/fiji.png" alt="Fiji" class="w-10 h-10 mr-2 rounded-full" />
+                                            Fiji
                                         </li>
                                     </ul>
                                 </div>
-
                             </div>
+                            
 
 
 
