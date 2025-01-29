@@ -18,6 +18,12 @@ module.exports = {
     './src/password-changed.html',
     './src/recover-verification.html',
     './src/dashboard.html',
+    './src/your-trans.html',
+    './src/your-recipient.html',
+    './src/your-recipient-select-country.html',
+    './src/your-recipient-choose.html',
+    './src/your-recipient-choose-add-details.html',
+
   ],
   theme: {
     extend: {

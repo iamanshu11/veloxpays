@@ -171,13 +171,6 @@ function togglePassword(fieldId, iconId, imgId) {
 }
 
 
-
-
-
-
-
-
-
 // Toggle the country code list dropdown
 function toggleCountryCodeList(event) {
     event.stopPropagation();
@@ -225,3 +218,57 @@ document.addEventListener('click', (event) => {
         countryCodeList.classList.add('hidden');
     }
 });
+
+
+// *********** filter for Account  **************************** 
+function showForm(formId, element) {
+    // Hide all forms
+    document.getElementById('personalForm').classList.add('hidden');
+    document.getElementById('businessForm').classList.add('hidden');
+  
+    // Remove active style from all links
+    document.querySelectorAll('.flex > a').forEach(a => {
+        a.children[0].style.backgroundColor = ''; // Reset background color
+    });
+  
+    // Show the selected form and add active style
+    document.getElementById(formId).classList.remove('hidden');
+    element.children[0].style.backgroundColor = '#8B1EC4'; // Custom purple color for active state
+  }
+  
+  // Ensure the DOM is fully loaded before running the script
+  document.addEventListener('DOMContentLoaded', function() {
+    const personalLink = document.getElementById('personalLink');
+    showForm('personalForm', personalLink);
+  });
+
+
+
+// *********** Modal Overlay  **************************** 
+function openModal() {
+    const modalOverlay = document.getElementById("modalOverlay");
+    const modalContent = document.getElementById("modalContent");
+    
+    // Show modal with fade-in effect
+    modalOverlay.classList.remove("hidden");
+    setTimeout(() => {
+        modalOverlay.classList.add("opacity-100");
+        modalContent.classList.remove("scale-95", "opacity-0");
+        modalContent.classList.add("scale-100", "opacity-100");
+    }, 10);
+}
+
+function closeModal() {
+    const modalOverlay = document.getElementById("modalOverlay");
+    const modalContent = document.getElementById("modalContent");
+
+    // Add fade-out and scale animation before hiding modal
+    modalContent.classList.remove("scale-100", "opacity-100");
+    modalContent.classList.add("scale-95", "opacity-0");
+    modalOverlay.classList.remove("opacity-100");
+
+    setTimeout(() => {
+        modalOverlay.classList.add("hidden");
+    }, 300); // Wait for animation to complete before hiding
+}
+
