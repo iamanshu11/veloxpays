@@ -272,3 +272,4 @@ function closeModal() {
     }, 300); // Wait for animation to complete before hiding
 }
 
+

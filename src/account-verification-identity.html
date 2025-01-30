@@ -70,21 +70,21 @@
                             </a>
                         </li>
                         <li>
-                            <a href="your-trans.html" class="flex items-center text-gray-700 ">
+                            <a href="your-trans.html" class="flex items-center  text-gray-700">
                                 <img src="../images/dashboard/Transfer.png" alt="Transfers Icon" class="h-6 w-6 mr-2">
                                 <!-- Replace with your icon -->
                                 Your Transfers
                             </a>
                         </li>
                         <li>
-                            <a href="your-recipient.html" class="flex items-center text-[#0579D8] ">
+                            <a href="your-recipient.html" class="flex items-center text-gray-700">
                                 <img src="../images/dashboard/people.png" alt="Recipients Icon" class="h-6 w-6 mr-2">
                                 <!-- Replace with your icon -->
                                 Your Recipients
                             </a>
                         </li>
                         <li>
-                            <a href="account-verification.html" class="flex items-center text-gray-700">
+                            <a href="account-verification.html" class="flex items-center text-[#0579D8]">
                                 <img src="../images/dashboard/protection-verification.png" alt="Verification Icon"
                                     class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
                                 Account Verification
@@ -155,14 +155,14 @@
                                 </a>
                               </li>
                             <li>
-                                <a href="your-recipient.html" class="flex items-center text-[#0579D8]">
+                                <a href="your-recipient.html" class="flex items-center text-gray-700">
                                     <img src="../images/dashboard/people.png" alt="Recipients Icon"
                                         class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
                                     Your Recipients
                                 </a>
                             </li>
                             <li>
-                                <a href="account-verification.html" class="flex items-center text-gray-700">
+                                <a href="account-verification.html" class="flex items-center text-[#0579D8]">
                                     <img src="../images/dashboard/protection-verification.png" alt="Verification Icon"
                                         class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
                                     Account Verification
@@ -215,42 +215,68 @@
 
                     <!-- Main Content -->
                     <main class="flex-1 p-4 md:p-6">
-
-                        <!-- Welcome Section -->
-                        <div class="bg-gray-50 min-h-screen flex  w-full">
-                            <div class="bg-white p-6 w-full max-w-none">
-                                <p class="text-[22px] text-purple-secondary mb-3">Select Recipients Payment Method</p>
-
-                                <div class="flex gap-5 w-full">
-                                    <!-- Personal Recipient Selection -->
-                                    <a href="your-recipient-choose-add-details.html"
-                                        class="w-1/2 md:w-1/2 lg:w-1/3 sm:w-1/4  transition duration-300">
-                                        <div class="bg-[#00174F] shadow-lg rounded-lg p-10 flex items-center justify-center w-full mt-10">
-                                            <div class="flex flex-col items-center text-white">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 transition duration-300 transform hover:scale-110 focus:scale-110">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                                                  </svg>
-                                                  
-                                                <p class="text-xl mb-2 mt-4">Account Transfer</p>
+                    
+                        <div class="">
+                            <h2 class="text-2xl   mt-6 text-black">Account Verification > Upload Proof of Identity</h2>
+                            <p  class="text-gray-500 text-sm mt-2">To comply with financial regulations, we are required to verify your identity.</p>
+                        </div>
+                    
+                        <div class="mt-4 md:mt-8 ">
+                            <div class="flex ">
+                                <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 w-full max-w-5xl">
+                                    <!-- Card 1 -->
+                                     
+                                    <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6  relative">
+                                        <!-- Details Info -->
+                                        <a href="account-verification-identity-passport.html">
+                                            <div class="  text-center">
+                                                <h3 class="text-gray-800 font-semibold mb-6">Passport</h3>
+                                                <a href="account-verification-identity-passport.html"
+                                                    class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
+                                                    <button type="submit" class="">
+                                                        Select
+                                                    </button>
+                                    
+                                                </a>
                                             </div>
-                                        </div>
-                                    </a>
-                                
-                                    <!-- Business Recipient Selection -->
-                                    <a href="#"
-                                        class="w-1/2 md:w-1/2 lg:w-1/3 sm:w-1/4  transition duration-300">
-                                        <div class="bg-[#00174F] shadow-lg rounded-lg p-10 flex items-center justify-center w-full mt-10">
-                                            <div class="flex flex-col items-center text-white">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 transition duration-300 transform hover:scale-110 focus:scale-110">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
-                                                  </svg>
-                                                  
-                                                <p class="text-xl mb-2 mt-4">Mobile Wallet</p>
+                                        </a>
+                                    </div>
+                    
+                                    <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6  relative">
+                                        <!-- Details Info -->
+                                        <a href="">
+                                            <div class="  text-center">
+                                                <h3 class="text-gray-800 font-semibold mb-6">Driver's license</h3>
+                                                <a href=""
+                                                    class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
+                                                    <button type="submit" class="">
+                                                        Select
+                                                    </button>
+                                    
+                                                </a>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
+                    
+                                    <!-- Card 3 -->
+                                    <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6 relative">
+                                        <!-- Details Info -->
+                                        <a href="">
+                                            <div class="  text-center">
+                                                <h3 class="text-gray-800 font-semibold mb-6">National ID</h3>
+                                                <a href=""
+                                                    class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
+                                                    <button type="submit" class="">
+                                                        Select
+                                                    </button>
+                                    
+                                                </a>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-
+                            </div>
+                        </div>
                     </main>
                 </div>
             </div>

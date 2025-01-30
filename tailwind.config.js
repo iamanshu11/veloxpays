@@ -23,6 +23,10 @@ module.exports = {
     './src/your-recipient-select-country.html',
     './src/your-recipient-choose.html',
     './src/your-recipient-choose-add-details.html',
+    './src/account-verification.html',
+    './src/account-verification-identity.html',
+    './src/account-verification-identity-passport.html',
+    './src/account-verification-identity-passport-verified.html',
 
   ],
   theme: {
