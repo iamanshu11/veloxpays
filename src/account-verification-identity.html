@@ -13,282 +13,277 @@
 
 
 <body>
+    <!-- Header -->
+    <header class="bg-white  p-4">
+        <div class="container mx-auto flex items-center justify-between overflow-x-auto">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <a href="index.html">
+                    <img src="../images/logo.png" alt="VeloxPays Logo" class="w-20">
+                </a>
+            </div>
 
-    <div class="min-h-screen shadow-b-md bg-white">
-        <!-- Header -->
-        <header class="bg-white  p-4">
-            <div class="container mx-auto flex items-center justify-between overflow-x-auto">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <a href="index.html">
-                        <img src="../images/logo.png" alt="VeloxPays Logo" class="w-20">
+            <!-- Profile Section / Burger Icon -->
+            <div class="flex items-center space-x-4">
+                <!-- Burger Icon (visible only on mobile) -->
+                <button class="block md:hidden text-gray-800" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+
+                <!-- Profile Icon and Name (visible only on desktop) -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <!-- Clickable Profile Section -->
+                    <a href="#" class="flex items-center space-x-2">
+                        <!-- Profile Icon -->
+                        <div
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 text-black font-bold">
+                            AS
+                        </div>
+                        <!-- Profile Name and Arrow -->
+                        <span class="flex items-center text-black font-semibold">
+                            Anshuman Singh
+                            <img src="../images/Arrow.png" alt="Arrow" class="ml-2 w-4 h-4">
+                        </span>
                     </a>
                 </div>
 
-                <!-- Profile Section / Burger Icon -->
-                <div class="flex items-center space-x-4">
-                    <!-- Burger Icon (visible only on mobile) -->
-                    <button class="block md:hidden text-gray-800" id="menu-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
+            </div>
+        </div>
+        <nav class="fixed inset-y-0 left-0 bg-gray-100 w-64 transform -translate-x-full transition-transform duration-300 ease-in-out z-20 md:hidden min-h-screen"
+            id="sidebar">
+            <ul class="p-6 space-y-4">
+                <li>
+                    <a href="dashboard.html" class="flex items-center text-gray-700 font-medium">
+                        <img src="../images/dashboard/Home.png" alt="Dashboard Icon" class="h-6 w-6 mr-2">
+                        <!-- Replace with your icon -->
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="your-trans.html" class="flex items-center  text-gray-700">
+                        <img src="../images/dashboard/Transfer.png" alt="Transfers Icon" class="h-6 w-6 mr-2">
+                        <!-- Replace with your icon -->
+                        Your Transfers
+                    </a>
+                </li>
+                <li>
+                    <a href="your-recipient.html" class="flex items-center text-gray-700">
+                        <img src="../images/dashboard/people.png" alt="Recipients Icon" class="h-6 w-6 mr-2">
+                        <!-- Replace with your icon -->
+                        Your Recipients
+                    </a>
+                </li>
+                <li>
+                    <a href="account-verification.html" class="flex items-center text-[#0579D8]">
+                        <img src="../images/dashboard/protection-verification.png" alt="Verification Icon"
+                            class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
+                        Account Verification
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-gray-700">
+                        <img src="../images/dashboard/settings.png" alt="Settings Icon" class="h-6 w-6 mr-2">
+                        <!-- Replace with your icon -->
+                        Account Settings
+                    </a>
+                </li>
+                <hr>
 
-                    <!-- Profile Icon and Name (visible only on desktop) -->
-                    <div class="hidden md:flex items-center space-x-2">
-                        <!-- Clickable Profile Section -->
-                        <a href="#" class="flex items-center space-x-2">
-                            <!-- Profile Icon -->
-                            <div
-                                class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 text-black font-bold">
-                                AS
-                            </div>
-                            <!-- Profile Name and Arrow -->
-                            <span class="flex items-center text-black font-semibold">
-                                Anshuman Singh
-                                <img src="../images/Arrow.png" alt="Arrow" class="ml-2 w-4 h-4">
-                            </span>
+                <li>
+
+                    Other
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-gray-700">
+                        <img src="../images/dashboard/help.png" alt="Help Icon" class="h-6 w-6 mr-2">
+                        <!-- Replace with your icon -->
+                        Help & Support
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-gray-700">
+                        <img src="../images/dashboard/settings.png" alt="Settings Icon" class="h-6 w-6 mr-2">
+                        <!-- Replace with your icon -->
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-gray-700">
+                        <img src="../images/dashboard/Logout.png" alt="Logout Icon" class="h-6 w-6 mr-2">
+                        <!-- Replace with your icon -->
+                        Log Out
+                    </a>
+                </li>
+
+                <div class="mt-8">
+                    <button class="w-full bg-blue-primary text-white py-2 px-4 rounded-[10px]">Send
+                        Money</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mx-auto">
+        <div class="flex bg-white">
+            <!-- Sidebar for Desktop -->
+            <aside class="hidden md:block bg-white w-1/4 py-6  shadow-[18px 0 12px -16px rgba(0,0,0,0.1)]">
+                <ul class="space-y-6">
+                    <li>
+                        <a href="dashboard.html" class="flex items-center text-gray-700 font-medium">
+                            <img src="../images/dashboard/Home.png" alt="Dashboard Icon" class="h-6 w-6 mr-2">
+                            <!-- Replace with your icon -->
+                            Dashboard
                         </a>
-                    </div>
+                    </li>
+                    <li>
+                        <a href="your-trans.html" class="flex items-center text-gray-700">
+                            <!-- Icon with group-hover to trigger underline on text -->
+                            <img src="../images/dashboard/Transfer.png" alt="Transfers Icon" class="h-6 w-6 mr-2 ">
 
+                            <!-- Text that gets underlined when image is hovered -->
+                            <span class="">Your Transfers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="your-recipient.html" class="flex items-center text-gray-700">
+                            <img src="../images/dashboard/people.png" alt="Recipients Icon" class="h-6 w-6 mr-2">
+                            <!-- Replace with your icon -->
+                            Your Recipients
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account-verification.html" class="flex items-center text-[#0579D8]">
+                            <img src="../images/dashboard/protection-verification.png" alt="Verification Icon"
+                                class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
+                            Account Verification
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center text-gray-700">
+                            <img src="../images/dashboard/settings.png" alt="Settings Icon" class="h-6 w-6 mr-2">
+                            <!-- Replace with your icon -->
+                            Account Settings
+                        </a>
+                    </li>
+                    <!-- Other sidebar items with icons -->
+
+                    <hr>
+
+                    <li>
+
+                        Other
+                    </li>
+
+                    <li>
+                        <a href="#" class="flex items-center text-gray-700">
+                            <img src="../images/dashboard/help.png" alt="Help Icon" class="h-6 w-6 mr-2">
+                            <!-- Replace with your icon -->
+                            Help & Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center text-gray-700">
+                            <img src="../images/dashboard/settings.png" alt="Settings Icon" class="h-6 w-6 mr-2">
+                            <!-- Replace with your icon -->
+                            Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center text-gray-700">
+                            <img src="../images/dashboard/Logout.png" alt="Logout Icon" class="h-6 w-6 mr-2">
+                            <!-- Replace with your icon -->
+                            Log Out
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-8">
+                    <button class="w-full bg-blue-primary text-white py-2 px-4 rounded-[10px]">Send
+                        Money</button>
                 </div>
-            </div>
-        </header>
+                </ul>
+            </aside>
 
-        <section class=" bg-white flex items-center">
-            <div class="container mx-auto   ">
-                <nav class="fixed inset-y-0 left-0 bg-gray-100 w-64 transform -translate-x-full transition-transform duration-300 ease-in-out z-20 md:hidden min-h-screen"
-                    id="sidebar">
-                    <ul class="p-6 space-y-4">
-                        <li>
-                            <a href="dashboard.html" class="flex items-center text-gray-700 font-medium">
-                                <img src="../images/dashboard/Home.png" alt="Dashboard Icon" class="h-6 w-6 mr-2">
-                                <!-- Replace with your icon -->
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="your-trans.html" class="flex items-center  text-gray-700">
-                                <img src="../images/dashboard/Transfer.png" alt="Transfers Icon" class="h-6 w-6 mr-2">
-                                <!-- Replace with your icon -->
-                                Your Transfers
-                            </a>
-                        </li>
-                        <li>
-                            <a href="your-recipient.html" class="flex items-center text-gray-700">
-                                <img src="../images/dashboard/people.png" alt="Recipients Icon" class="h-6 w-6 mr-2">
-                                <!-- Replace with your icon -->
-                                Your Recipients
-                            </a>
-                        </li>
-                        <li>
-                            <a href="account-verification.html" class="flex items-center text-[#0579D8]">
-                                <img src="../images/dashboard/protection-verification.png" alt="Verification Icon"
-                                    class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
-                                Account Verification
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center text-gray-700">
-                                <img src="../images/dashboard/settings.png" alt="Settings Icon" class="h-6 w-6 mr-2">
-                                <!-- Replace with your icon -->
-                                Account Settings
-                            </a>
-                        </li>
-                        <hr>
+            <!-- Main Content -->
+            <main class="flex-1 p-4 md:p-6">
 
-                        <li>
+                <div class="">
+                    <h2 class="text-2xl   mt-6 text-black">Account Verification > Upload Proof of Identity</h2>
+                    <p class="text-gray-500 text-sm mt-2">To comply with financial regulations, we are required to
+                        verify
+                        your identity.</p>
+                </div>
 
-                            Other
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center text-gray-700">
-                                <img src="../images/dashboard/help.png" alt="Help Icon" class="h-6 w-6 mr-2">
-                                <!-- Replace with your icon -->
-                                Help & Support
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center text-gray-700">
-                                <img src="../images/dashboard/settings.png" alt="Settings Icon" class="h-6 w-6 mr-2">
-                                <!-- Replace with your icon -->
-                                Settings
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center text-gray-700">
-                                <img src="../images/dashboard/Logout.png" alt="Logout Icon" class="h-6 w-6 mr-2">
-                                <!-- Replace with your icon -->
-                                Log Out
-                            </a>
-                        </li>
+                <div class="mt-4 md:mt-8 ">
+                    <div class="flex ">
+                        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 w-full max-w-5xl">
+                            <!-- Card 1 -->
 
-                        <div class="mt-8">
-                            <button class="w-full bg-blue-primary text-white py-2 px-4 rounded-[10px]">Send
-                                Money</button>
-                        </div>
-                    </ul>
+                            <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6  relative">
+                                <!-- Details Info -->
+                                <a href="account-verification-identity-passport.html">
+                                    <div class="  text-center">
+                                        <h3 class="text-gray-800 font-semibold mb-6">Passport</h3>
+                                        <a href="account-verification-identity-passport.html"
+                                            class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
+                                            <button type="submit" class="">
+                                                Select
+                                            </button>
 
-                </nav>
-
-                <div class="flex bg-white ">
-                    <!-- Sidebar for Desktop -->
-                    <aside class="hidden md:block bg-white w-1/4 p-6  shadow-[18px 0 12px -16px rgba(0,0,0,0.1)]">
-                        <ul class="space-y-6">
-                            <li>
-                                <a href="dashboard.html" class="flex items-center text-gray-700 font-medium">
-                                    <img src="../images/dashboard/Home.png" alt="Dashboard Icon" class="h-6 w-6 mr-2">
-                                    <!-- Replace with your icon -->
-                                    Dashboard
-                                </a>
-                            </li>
-                            <li>
-                                <a href="your-trans.html" class="flex items-center text-gray-700">
-                                  <!-- Icon with group-hover to trigger underline on text -->
-                                  <img src="../images/dashboard/Transfer.png" alt="Transfers Icon"
-                                    class="h-6 w-6 mr-2 ">
-                              
-                                  <!-- Text that gets underlined when image is hovered -->
-                                  <span class="">Your Transfers</span>
-                                </a>
-                              </li>
-                            <li>
-                                <a href="your-recipient.html" class="flex items-center text-gray-700">
-                                    <img src="../images/dashboard/people.png" alt="Recipients Icon"
-                                        class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
-                                    Your Recipients
-                                </a>
-                            </li>
-                            <li>
-                                <a href="account-verification.html" class="flex items-center text-[#0579D8]">
-                                    <img src="../images/dashboard/protection-verification.png" alt="Verification Icon"
-                                        class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
-                                    Account Verification
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center text-gray-700">
-                                    <img src="../images/dashboard/settings.png" alt="Settings Icon"
-                                        class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
-                                    Account Settings
-                                </a>
-                            </li>
-                            <!-- Other sidebar items with icons -->
-
-                            <hr>
-
-                            <li>
-
-                                Other
-                            </li>
-
-                            <li>
-                                <a href="#" class="flex items-center text-gray-700">
-                                    <img src="../images/dashboard/help.png" alt="Help Icon" class="h-6 w-6 mr-2">
-                                    <!-- Replace with your icon -->
-                                    Help & Support
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center text-gray-700">
-                                    <img src="../images/dashboard/settings.png" alt="Settings Icon"
-                                        class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
-                                    Settings
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center text-gray-700">
-                                    <img src="../images/dashboard/Logout.png" alt="Logout Icon" class="h-6 w-6 mr-2">
-                                    <!-- Replace with your icon -->
-                                    Log Out
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="mt-8">
-                            <button class="w-full bg-blue-primary text-white py-2 px-4 rounded-[10px]">Send
-                                Money</button>
-                        </div>
-                        </ul>
-                    </aside>
-
-                    <!-- Main Content -->
-                    <main class="flex-1 p-4 md:p-6">
-                    
-                        <div class="">
-                            <h2 class="text-2xl   mt-6 text-black">Account Verification > Upload Proof of Identity</h2>
-                            <p  class="text-gray-500 text-sm mt-2">To comply with financial regulations, we are required to verify your identity.</p>
-                        </div>
-                    
-                        <div class="mt-4 md:mt-8 ">
-                            <div class="flex ">
-                                <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 w-full max-w-5xl">
-                                    <!-- Card 1 -->
-                                     
-                                    <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6  relative">
-                                        <!-- Details Info -->
-                                        <a href="account-verification-identity-passport.html">
-                                            <div class="  text-center">
-                                                <h3 class="text-gray-800 font-semibold mb-6">Passport</h3>
-                                                <a href="account-verification-identity-passport.html"
-                                                    class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
-                                                    <button type="submit" class="">
-                                                        Select
-                                                    </button>
-                                    
-                                                </a>
-                                            </div>
                                         </a>
                                     </div>
-                    
-                                    <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6  relative">
-                                        <!-- Details Info -->
-                                        <a href="">
-                                            <div class="  text-center">
-                                                <h3 class="text-gray-800 font-semibold mb-6">Driver's license</h3>
-                                                <a href=""
-                                                    class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
-                                                    <button type="submit" class="">
-                                                        Select
-                                                    </button>
-                                    
-                                                </a>
-                                            </div>
+                                </a>
+                            </div>
+
+                            <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6  relative">
+                                <!-- Details Info -->
+                                <a href="">
+                                    <div class="  text-center">
+                                        <h3 class="text-gray-800 font-semibold mb-6">Driver's license</h3>
+                                        <a href=""
+                                            class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
+                                            <button type="submit" class="">
+                                                Select
+                                            </button>
+
                                         </a>
                                     </div>
-                    
-                                    <!-- Card 3 -->
-                                    <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6 relative">
-                                        <!-- Details Info -->
-                                        <a href="">
-                                            <div class="  text-center">
-                                                <h3 class="text-gray-800 font-semibold mb-6">National ID</h3>
-                                                <a href=""
-                                                    class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
-                                                    <button type="submit" class="">
-                                                        Select
-                                                    </button>
-                                    
-                                                </a>
-                                            </div>
+                                </a>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="bg-[#EFEFEF] shadow-md rounded-lg p-6 relative">
+                                <!-- Details Info -->
+                                <a href="">
+                                    <div class="  text-center">
+                                        <h3 class="text-gray-800 font-semibold mb-6">National ID</h3>
+                                        <a href=""
+                                            class="flex-1 bg-[#00174F] text-center p-2 px-4 font-medium text-white rounded-[10px] hover:bg-[#00174F] transition">
+                                            <button type="submit" class="">
+                                                Select
+                                            </button>
+
                                         </a>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
-                    </main>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </main>
+        </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/heroicons.min.js"></script>
-        <script src="../src/js/script.js"></script>
-        <script>
-            document.getElementById('menu-toggle').addEventListener('click', function () {
-                document.getElementById('sidebar').classList.toggle('-translate-x-full');
-            });
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/heroicons.min.js"></script>
+    <script src="../src/js/script.js"></script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('-translate-x-full');
+        });
+    </script>
 </body>
 
 </html>
