@@ -1010,6 +1010,10 @@ html,
   max-width: 36rem;
 }
 
+.max-w-md{
+  max-width: 28rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -1198,6 +1202,11 @@ html,
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-divide-opacity, 1));
+}
+
+.divide-\[\#A24ECE\] > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(162 78 206 / var(--tw-divide-opacity, 1));
 }
 
 .overflow-x-auto{
