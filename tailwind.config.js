@@ -37,6 +37,10 @@ module.exports = {
     './src/account-verification-identity-account-statement.html',
     './src/account-verification-identity-income-tax.html',
     './src/send-money.html',
+    './src/send-money-select-recipient.html',
+    './src/send-money-select-transfer.html',
+    './src/send-money-select-transfer-confirm.html',
+    './src/send-money-select-transfer-confirm-sucess.html',
 
 
   ],

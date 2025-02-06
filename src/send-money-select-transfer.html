@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloxpays</title>
+
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="../src/custom.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+    <!-- Header -->
+    <header class="bg-white  p-4">
+        <div class="container mx-auto flex items-center justify-between overflow-x-auto">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <a href="index.html">
+                    <img src="../images/logo.png" alt="VeloxPays Logo" class="w-20">
+                </a>
+            </div>
+
+            <!-- Profile Section / Burger Icon -->
+            <div class="flex items-center space-x-4">
+                <!-- Burger Icon (visible only on mobile) -->
+                <button class="block md:hidden text-gray-800" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+
+                <!-- Profile Icon and Name (visible only on desktop) -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <!-- Clickable Profile Section -->
+                    <a href="#" class="flex items-center space-x-2">
+                        <!-- Profile Icon -->
+                        <div
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 text-black font-bold">
+                            AS
+                        </div>
+                        <!-- Profile Name and Arrow -->
+                        <span class="flex items-center text-black font-semibold">
+                            Anshuman Singh
+                            <img src="../images/Arrow.png" alt="Arrow" class="ml-2 w-4 h-4">
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <nav class="fixed inset-y-0 left-0 bg-gray-100 w-64 transform -translate-x-full transition-transform duration-300 ease-in-out z-20 md:hidden min-h-screen"
+        id="sidebar">
+        <ul class="p-6 space-y-4 hover:text-[#0579D8]">
+            <li>
+                <a href="dashboard.html" class="flex items-center text-[#0579D8] font-medium">
+                    <img src="../images/dashboard/Home.png" alt="Dashboard Icon" class="h-6 w-6 mr-2">
+                    <!-- Replace with your icon -->
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="your-trans.html" class="flex items-center text-gray-700">
+                    <img src="../images/dashboard/Transfer.png" alt="Transfers Icon" class="h-6 w-6 mr-2">
+                    <!-- Replace with your icon -->
+                    Your Transfers
+                </a>
+            </li>
+            <li>
+                <a href="your-recipient.html" class="flex items-center text-gray-700  ">
+                    <img src="../images/dashboard/people.png" alt="Recipients Icon" class="h-6 w-6 mr-2">
+                    <!-- Replace with your icon -->
+                    Your Recipients
+                </a>
+            </li>
+            <li>
+                <a href="account-verification.html" class="flex items-center text-gray-700">
+                    <img src="../images/dashboard/protection-verification.png" alt="Verification Icon"
+                        class="h-6 w-6 mr-2"> <!-- Replace with your icon -->
+                    Account Verification
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center text-gray-700">
+                    <img src="../images/dashboard/settings.png" alt="Settings Icon" class="h-6 w-6 mr-2">
+                    <!-- Replace with your icon -->
+                    Account Settings
+                </a>
+            </li>
+            <hr>
+
+            <li>
+
+                Other
+            </li>
+            <li>
+                <a href="#" class="flex items-center text-gray-700">
+                    <img src="../images/dashboard/help.png" alt="Help Icon" class="h-6 w-6 mr-2">
+                    <!-- Replace with your icon -->
+                    Help & Support
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center text-gray-700">
+                    <img src="../images/dashboard/settings.png" alt="Settings Icon" class="h-6 w-6 mr-2">
+                    <!-- Replace with your icon -->
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center text-gray-700">
+                    <img src="../images/dashboard/Logout.png" alt="Logout Icon" class="h-6 w-6 mr-2">
+                    <!-- Replace with your icon -->
+                    Log Out
+                </a>
+            </li>
+
+            <div class="mt-8">
+                <button class="w-full bg-blue-primary text-white py-2 px-4 rounded-[10px]">Send
+                    Money</button>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="container mx-auto flex">
+        <!-- Sidebar for Desktop -->
+        <aside class="hidden md:block bg-white w-1/4 py-6  shadow-[18px 0 12px -16px rgba(0,0,0,0.1)]">
+            <ul class="space-y-6 ">
+                <li>
+                    <a href="send-money.html" class="flex items-center text-[#00CE0A]   font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+
+                        Payout
+                    </a>
+                </li>
+                <li>
+                    <a href="send-money-select-recipient.html" class="flex items-center text-[#00CE0A] ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+
+
+                        Select Recipient
+                    </a>
+                </li>
+                <li>
+                    <a href="send-money-select-transfer.html" class="flex items-center text-[#0579D8]  ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                        </svg>
+                        Transfer Summary
+                    </a>
+                </li>
+                <li>
+                    <a href="account-verification.html" class="flex items-center text-gray-700 ">
+                        Overview
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <section class="flex-1 p-4 md:p-6">
+            <div class="mt-4 md:mt-6 flex xl:flex-row flex-col gap-6">
+                <div class="xl:w-1/2 w-full">
+                    <h2 class="text-xl font-semibold mb-2 p-4  text-black">Transfer Summary
+                    </h2>
+                    <div class="bg-[#D9D9D9]  shadow-sm rounded-lg responsive-table">
+                        <div class="divide-y   p-6">
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Amount sending</span>
+                                <span class="text-black">£ 100.00</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Transaction Fess</span>
+                                <span class="text-black">£ 0.00</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black"> Converted Amount</span>
+                                <span class="text-black">£ 100.01</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Exchange Rate</span>
+                                <span class="text-black">20</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Amount the Recipient Receives</span>
+                                <span class="text-black">₦ 2330.88</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Discount</span>
+                                <span class="text-black">Apply Discount Code</span>
+                            </div>
+                            <hr class="border-t-2 border-black border-dotted mt-2">
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Total to pay</span>
+                                <span class="text-black">£ 2500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl font-semibold mt-2 p-4  text-black">Transfer Summary
+                    </h2>
+
+                    <div>
+                        <select id="bank" name="bank"
+                            class="w-full px-4 py-3 bg-[#EFEFEF] border border-gray-300 rounded-lg focus:outline-none">
+                            <option>Please select</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Family">Family</option>
+                            <option value="Business">Business</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Gift">Gift</option>
+                        </select>
+                    </div>
+                    
+                    <a href="send-money-select-transfer-confirm.html">
+                        <button
+                            class="w-full bg-blue-primary text-white text-lg font-medium py-4 mt-6 rounded-[10px] hover:bg-blue-primary">
+                            Confirm Transfer
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <div class=" rounded-lg xl:w-1/2 w-full gap-6 ">
+                    <h2 class="text-xl font-semibold mb-2 p-4  text-black">Recipient Details
+                    </h2>
+                    <div class="bg-[#D9D9D9]  shadow-sm rounded-lg responsive-table">
+                        <div class="divide-y  divide-transparent p-6">
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Recipient</span>
+                                <span class="text-black">Ana Rhods</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Delivery Method</span>
+                                <span class="text-black">Bank Transfer</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black"> Bank</span>
+                                <span class="text-black">Consolidated Bank of Nigeria</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Account Number</span>
+                                <span class="text-black">12345678910</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="text-black">Amount</span>
+                                <span class="text-black">₦ 2330.88</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="../src/js/script.js"></script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('-translate-x-full');
+        });
+    </script>
+</body>
+
+</html>
